@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 263.65 259.64">
+  <defs>
+    <style>
+      .d {
+        fill: currentColor;
+      }
+    </style>
+  </defs>
+  <g id="c" data-name="Layer 1">
+    <polygon class="d" points="131.82 0 168.61 32.79 217.87 31.32 224.96 80.08 263.65 110.61 237.74 152.53 247.75 200.79 200.96 216.25 177.61 259.64 131.82 241.41 86.04 259.64 62.69 216.25 15.9 200.79 25.91 152.53 0 110.61 38.68 80.08 45.78 31.32 95.04 32.79 131.82 0"/>
+  </g>
+</svg>
