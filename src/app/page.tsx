@@ -6,6 +6,7 @@ import { TimeIcon } from "../components/TimeIcon";
 import { TimeProvider, useTimeContext } from "../hooks/useTimeContext";
 import { formatTime } from "../utils/timeUtils";
 import FishNavigation from "../components/FishNavigation";
+import Link from "next/link";
 
 const HomePage = () => {
   const { currentTime, timeOfDay } = useTimeContext();
@@ -82,6 +83,13 @@ const HomePage = () => {
               <p className="text-sm pl-8">About Project</p>
               <p className="text-sm pr-8 text-right">-&gt;</p>
             </div>
+            <Link
+              href="/litreview"
+              className="w-[100%] h-[10%] flex items-center justify-between navigation-box"
+            >
+              <p className="text-sm pl-8">Literature Review</p>
+              <p className="text-sm pr-8 text-right">-&gt;</p>
+            </Link>
           </div>
           <div className="w-[76%] container-box overflow-hidden">
             <div className="w-full h-full">

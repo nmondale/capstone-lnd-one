@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-cardo), serif;
 }
 
 @layer utilities {
@@ -31,5 +31,6 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
 
 

@@ -12,20 +12,11 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/audiovisual/page": [
+    "/litreview/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/audiovisual/page.js"
-    ],
-    "/signage/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/signage/page.js"
-    ],
-    "/im-here/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/im-here/page.js"
+      "static/css/app/litreview/page.css",
+      "static/chunks/app/litreview/page.js"
     ]
   }
 }

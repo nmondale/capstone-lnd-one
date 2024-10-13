@@ -16,7 +16,7 @@ export const ThemeToggle: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col items-center">
       <button
         onClick={() => setTheme("dark")}
         className={`w-8 h-8 rounded-full border border-solid ${
@@ -25,7 +25,7 @@ export const ThemeToggle: React.FC = () => {
       />
       <button
         onClick={handleAltClick}
-        className="w-8 h-8 rounded-full border border-solid bg-main border-alt flex items-center justify-center"
+        className="w-8 h-8 rounded-full border border-solid bg-main border-alt flex items-center justify-center my-2"
       >
         <div className="w-4 h-4 rounded-full bg-alt" />
       </button>
