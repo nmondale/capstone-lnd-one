@@ -1,3 +1,5 @@
+"use client";
+
 import React, {
   createContext,
   useContext,
@@ -43,27 +45,27 @@ export const TimeProvider: React.FC<{ children: React.ReactNode }> = ({
     currentTheme: "alt",
   });
 
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const stPaulTime = new Date(
-        now.toLocaleString("en-US", { timeZone: "America/Chicago" })
-      );
-      const hour = stPaulTime.getHours();
-      const newColorScheme = getColorScheme(hour);
-      setTimeContext((prev) => ({
-        ...prev,
-        currentTime: stPaulTime,
-        timeOfDay: getTimeOfDay(hour),
-        colorScheme: newColorScheme,
-      }));
-    };
+  const updateTime = useCallback(() => {
+    const now = new Date();
+    const stPaulTime = new Date(
+      now.toLocaleString("en-US", { timeZone: "America/Chicago" })
+    );
+    const hour = stPaulTime.getHours();
+    const newColorScheme = getColorScheme(hour);
+    setTimeContext((prev) => ({
+      ...prev,
+      currentTime: stPaulTime,
+      timeOfDay: getTimeOfDay(hour),
+      colorScheme: newColorScheme,
+    }));
+  }, []);
 
+  useEffect(() => {
     updateTime();
-    const interval = setInterval(updateTime, 1000); // Update every second
+    const interval = setInterval(updateTime, 60000); // Update every minute
 
     return () => clearInterval(interval);
-  }, []);
+  }, [updateTime]);
 
   return (
     <TimeContext.Provider value={timeContext}>{children}</TimeContext.Provider>

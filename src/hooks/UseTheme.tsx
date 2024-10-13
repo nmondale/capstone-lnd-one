@@ -3,20 +3,35 @@ import { setTheme as setThemeColors } from "../lib/theme";
 
 export const useTheme = (colorScheme: { main: string; alt: string }) => {
   const [currentTheme, setCurrentTheme] = useState<"light" | "dark" | "alt">(
-    "alt"
+    () => {
+      const storedTheme = localStorage.getItem("theme") as
+        | "light"
+        | "dark"
+        | "alt"
+        | null;
+      const theme = storedTheme || "alt";
+      if (theme === "alt") {
+        setThemeColors("alt", colorScheme.main, colorScheme.alt);
+      } else {
+        setThemeColors(theme);
+      }
+      return theme;
+    }
   );
   const [isAltInverted, setIsAltInverted] = useState(false);
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme") as
-      | "light"
-      | "dark"
-      | "alt"
-      | null;
-    if (storedTheme) {
-      setCurrentTheme(storedTheme);
+    if (currentTheme === "alt") {
+      const { main, alt } = colorScheme;
+      setThemeColors(
+        "alt",
+        isAltInverted ? alt : main,
+        isAltInverted ? main : alt
+      );
+    } else {
+      setThemeColors(currentTheme);
     }
-  }, []);
+  }, [currentTheme, isAltInverted, colorScheme]);
 
   const setTheme = (theme: "light" | "dark" | "alt") => {
     setCurrentTheme(theme);

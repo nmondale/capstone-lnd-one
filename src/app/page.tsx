@@ -5,10 +5,11 @@ import { ThemeToggle } from "../components/ThemeToggle";
 import { TimeIcon } from "../components/TimeIcon";
 import { TimeProvider, useTimeContext } from "../hooks/useTimeContext";
 import { formatTime } from "../utils/timeUtils";
+import FishNavigation from "../components/FishNavigation";
 
 const HomePage = () => {
   const { currentTime, timeOfDay } = useTimeContext();
-  const [clientTime, setClientTime] = useState<string>("--:--:--");
+  const [clientTime, setClientTime] = useState<string>("--:--");
 
   useEffect(() => {
     const updateClientTime = () => {
@@ -16,7 +17,7 @@ const HomePage = () => {
     };
 
     updateClientTime();
-    const interval = setInterval(updateClientTime, 1000);
+    const interval = setInterval(updateClientTime, 1000); // Update every minute
 
     return () => clearInterval(interval);
   }, []);
@@ -82,17 +83,15 @@ const HomePage = () => {
               <p className="text-sm pr-8 text-right">-&gt;</p>
             </div>
           </div>
-          <div className="w-[76%] container-box" />
+          <div className="w-[76%] container-box overflow-hidden">
+            <div className="w-full h-full">
+              <FishNavigation />
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default function Component() {
-  return (
-    <TimeProvider>
-      <HomePage />
-    </TimeProvider>
-  );
-}
+export default React.memo(HomePage);
