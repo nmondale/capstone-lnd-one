@@ -35,18 +35,22 @@ const LiteratureReview: React.FC = () => {
   const updateActiveBook = useCallback(
     debounce(() => {
       if (typeof window === "undefined" || !containerRef.current) return;
-      const { scrollTop, clientHeight } = containerRef.current;
+      const container = containerRef.current;
+      const { scrollTop, clientHeight } = container;
       const middleOfScreen = scrollTop + clientHeight / 2;
 
       for (let i = 1; i <= books.length; i++) {
-        const element = document.getElementById(`book-${i}`);
-        if (
-          element &&
-          element.offsetTop <= middleOfScreen &&
-          element.offsetTop + element.clientHeight > middleOfScreen
-        ) {
-          setActiveBook(i);
-          break;
+        const element = container.querySelector(`#book-${i}`);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const elementTop = rect.top + container.scrollTop;
+          if (
+            elementTop <= middleOfScreen &&
+            elementTop + rect.height > middleOfScreen
+          ) {
+            setActiveBook(i);
+            break;
+          }
         }
       }
     }, 50),
@@ -63,7 +67,7 @@ const LiteratureReview: React.FC = () => {
 
   const scrollToBook = useCallback((bookNumber: number) => {
     if (typeof window === "undefined" || !containerRef.current) return;
-    const element = document.getElementById(`book-${bookNumber}`);
+    const element = containerRef.current.querySelector(`#book-${bookNumber}`);
     if (element) {
       containerRef.current.scrollTo({
         top: element.offsetTop,

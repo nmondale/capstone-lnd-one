@@ -5,7 +5,10 @@ import { ThemeToggle } from "../components/ThemeToggle";
 import { TimeIcon } from "../components/TimeIcon";
 import { TimeProvider, useTimeContext } from "../hooks/useTimeContext";
 import { formatTime } from "../utils/timeUtils";
-import FishNavigation from "../components/FishNavigation";
+import dynamic from "next/dynamic";
+const FishNavigation = dynamic(() => import("../components/FishNavigation"), {
+  ssr: false,
+});
 import Link from "next/link";
 
 const HomePage = () => {
