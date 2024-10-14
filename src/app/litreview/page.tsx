@@ -26,56 +26,72 @@ const LiteratureReview: React.FC = () => {
   const { currentTheme } = useTimeContext();
   const [activeBook, setActiveBook] = useState(1);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  const updateActiveBook = useCallback(() => {
+    if (typeof window === "undefined" || !containerRef.current) return;
+    const container = containerRef.current;
+    const { scrollTop, clientHeight } = container;
+    const middleOfScreen = scrollTop + clientHeight / 2;
+
+    for (let i = 1; i <= books.length; i++) {
+      const element = container.querySelector(`#book-${i}`);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const elementTop = rect.top + container.scrollTop;
+        if (
+          elementTop <= middleOfScreen &&
+          elementTop + rect.height > middleOfScreen
+        ) {
+          setActiveBook(i);
+          break;
+        }
+      }
+    }
+  }, []);
+
+  const debouncedUpdateActiveBook = useMemo(
+    () => debounce(updateActiveBook, 50),
+    [updateActiveBook]
+  );
+
+  const scrollToBook = useCallback((bookNumber: number) => {
+    if (typeof window === "undefined" || !containerRef.current) return;
+    const element = containerRef.current.querySelector(`#book-${bookNumber}`);
+    if (element) {
+      const rect = element.getBoundingClientRect();
+      const scrollTop = containerRef.current.scrollTop;
+      const elementTop = rect.top + scrollTop;
+      containerRef.current.scrollTo({
+        top: elementTop,
+        behavior: "smooth",
+      });
+      setActiveBook(bookNumber);
+    }
+  }, []);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+    const container = containerRef.current;
+    if (container) {
+      container.addEventListener("scroll", debouncedUpdateActiveBook);
+      return () =>
+        container.removeEventListener("scroll", debouncedUpdateActiveBook);
+    }
+  }, [debouncedUpdateActiveBook, isClient]);
 
   const bookHeights = useMemo(
     () => books.map(() => Math.floor(Math.random() * 50) + 100),
     []
   );
 
-  const updateActiveBook = useCallback(
-    debounce(() => {
-      if (typeof window === "undefined" || !containerRef.current) return;
-      const container = containerRef.current;
-      const { scrollTop, clientHeight } = container;
-      const middleOfScreen = scrollTop + clientHeight / 2;
-
-      for (let i = 1; i <= books.length; i++) {
-        const element = container.querySelector(`#book-${i}`);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const elementTop = rect.top + container.scrollTop;
-          if (
-            elementTop <= middleOfScreen &&
-            elementTop + rect.height > middleOfScreen
-          ) {
-            setActiveBook(i);
-            break;
-          }
-        }
-      }
-    }, 50),
-    []
-  );
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("scroll", updateActiveBook);
-      return () => container.removeEventListener("scroll", updateActiveBook);
-    }
-  }, [updateActiveBook]);
-
-  const scrollToBook = useCallback((bookNumber: number) => {
-    if (typeof window === "undefined" || !containerRef.current) return;
-    const element = containerRef.current.querySelector(`#book-${bookNumber}`);
-    if (element) {
-      containerRef.current.scrollTo({
-        top: element.offsetTop,
-        behavior: "smooth",
-      });
-      setActiveBook(bookNumber);
-    }
-  }, []);
+  if (!isClient) {
+    return null; // or a loading spinner
+  }
 
   return (
     <div
@@ -176,10 +192,6 @@ const LiteratureReview: React.FC = () => {
                   ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
                   adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
                   dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua. Ut enim ad minim veniam, quis nostrud
                   exercitation ullamco laboris nisi ut aliquip ex ea commodo
                   consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
                   elit. Sed do eiusmod tempor incididunt ut labore et dolore

@@ -1,30 +1,35 @@
 "use client";
-import React, { useState, useEffect, useCallback, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/homepage-styles.css";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { TimeIcon } from "../components/TimeIcon";
 import { TimeProvider, useTimeContext } from "../hooks/useTimeContext";
 import { formatTime } from "../utils/timeUtils";
 import dynamic from "next/dynamic";
+import Link from "next/link";
+
 const FishNavigation = dynamic(() => import("../components/FishNavigation"), {
   ssr: false,
 });
-import Link from "next/link";
 
 const HomePage = () => {
-  const { currentTime, timeOfDay } = useTimeContext();
-  const [clientTime, setClientTime] = useState<string>("--:--");
+  const [isClient, setIsClient] = useState(false);
+  const timeContext = useTimeContext();
 
   useEffect(() => {
-    const updateClientTime = () => {
-      setClientTime(formatTime(new Date()));
-    };
-
-    updateClientTime();
-    const interval = setInterval(updateClientTime, 1000); // Update every minute
-
-    return () => clearInterval(interval);
+    setIsClient(true);
   }, []);
+
+  if (!isClient || !timeContext) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-main text-alt">
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
+  const { currentTime, timeOfDay } = timeContext;
+  const clientTime = formatTime(currentTime);
 
   return (
     <div className="min-h-screen p-0 m-0 bg-alt text-alt">

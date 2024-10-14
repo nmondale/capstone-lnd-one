@@ -52,13 +52,18 @@ const FishNavigation: React.FC = () => {
       };
 
       p.draw = () => {
-        const root = document.documentElement;
-        const mainColor = getComputedStyle(root)
-          .getPropertyValue("--main-color")
-          .trim();
-        const altColor = getComputedStyle(root)
-          .getPropertyValue("--alt-color")
-          .trim();
+        let mainColor = "#ffffff"; // Default color
+        let altColor = "#000000"; // Default color
+
+        if (typeof window !== "undefined") {
+          const root = document.documentElement;
+          mainColor = getComputedStyle(root)
+            .getPropertyValue("--main-color")
+            .trim();
+          altColor = getComputedStyle(root)
+            .getPropertyValue("--alt-color")
+            .trim();
+        }
 
         p.background(mainColor);
         let newHoveredFish: Boid | null = null;

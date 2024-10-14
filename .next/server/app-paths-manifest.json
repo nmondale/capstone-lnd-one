@@ -1,6 +1,11 @@
 {
-  "/thrown-aside/page": "app/thrown-aside/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/audiovisual/page": "app/audiovisual/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/litreview/page": "app/litreview/page.js",
-  "/page": "app/page.js"
+  "/im-here/page": "app/im-here/page.js",
+  "/poetrytext/page": "app/poetrytext/page.js",
+  "/page": "app/page.js",
+  "/signage/page": "app/signage/page.js",
+  "/thrown-aside/page": "app/thrown-aside/page.js"
 }
