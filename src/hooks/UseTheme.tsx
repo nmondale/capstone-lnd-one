@@ -4,11 +4,14 @@ import { setTheme as setThemeColors } from "../lib/theme";
 export const useTheme = (colorScheme: { main: string; alt: string }) => {
   const [currentTheme, setCurrentTheme] = useState<"light" | "dark" | "alt">(
     () => {
-      const storedTheme = localStorage.getItem("theme") as
-        | "light"
-        | "dark"
-        | "alt"
-        | null;
+      let storedTheme: "light" | "dark" | "alt" | null = null;
+      if (typeof window !== "undefined") {
+        storedTheme = localStorage.getItem("theme") as
+          | "light"
+          | "dark"
+          | "alt"
+          | null;
+      }
       const theme = storedTheme || "alt";
       if (theme === "alt") {
         setThemeColors("alt", colorScheme.main, colorScheme.alt);

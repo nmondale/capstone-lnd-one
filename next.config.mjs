@@ -7,6 +7,10 @@ const nextConfig = {
     });
     return config;
   },
+  experimental: {
+    appDir: true,
+  },
+  reactStrictMode: true,
 };
 
 export default nextConfig;

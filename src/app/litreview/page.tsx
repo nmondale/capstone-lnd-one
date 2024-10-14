@@ -34,7 +34,7 @@ const LiteratureReview: React.FC = () => {
 
   const updateActiveBook = useCallback(
     debounce(() => {
-      if (!containerRef.current) return;
+      if (typeof window === "undefined" || !containerRef.current) return;
       const { scrollTop, clientHeight } = containerRef.current;
       const middleOfScreen = scrollTop + clientHeight / 2;
 
@@ -62,8 +62,9 @@ const LiteratureReview: React.FC = () => {
   }, [updateActiveBook]);
 
   const scrollToBook = useCallback((bookNumber: number) => {
+    if (typeof window === "undefined" || !containerRef.current) return;
     const element = document.getElementById(`book-${bookNumber}`);
-    if (element && containerRef.current) {
+    if (element) {
       containerRef.current.scrollTo({
         top: element.offsetTop,
         behavior: "smooth",
@@ -171,6 +172,10 @@ const LiteratureReview: React.FC = () => {
                   ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
                   adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
                   dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Ut enim ad minim veniam, quis nostrud
                   exercitation ullamco laboris nisi ut aliquip ex ea commodo
                   consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
                   elit. Sed do eiusmod tempor incididunt ut labore et dolore
