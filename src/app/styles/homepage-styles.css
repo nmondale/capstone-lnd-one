@@ -3,6 +3,10 @@
   --alt-color: #000000;
 }
 
+body {
+  font-family: 'Cardo', serif; /* Ensure Cardo is loaded */
+}
+
 .container-box {
   background-color: var(--main-color);
   border-color: var(--alt-color);
@@ -18,7 +22,17 @@
   border-top-width: 1px;
   border-bottom-width: 1px;
   border-style: solid;
-  margin: -0.5px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+.artifact-navigation-box {
+  border-color: var(--alt-color);
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  margin-top: -1px;
+  margin-bottom: -1px;
 }
 
 .font-cardo {

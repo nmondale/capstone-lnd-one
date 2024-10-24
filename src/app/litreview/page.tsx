@@ -12,30 +12,22 @@ import Link from "next/link";
 import "../styles/homepage-styles.css";
 import { ThemeToggle } from "../../components/ThemeToggle";
 import { debounce } from "lodash";
-
-const books = [
-  "A Manifesto for Cyborgs by Donna Haraway",
-  "On Spatial Planning and Marx-ism: Looking Back, Going Forward by Ståle Holgersen",
-  "Speculative Everything by Anthony Dunne and Fiona Raby",
-  "From Counterculture to Cyberculture by Fred Turner",
-  "Mapping Controversies in Architecture by Albena Yaneva",
-  "If Everything is so Smooth, why am I so Sad? by Anastasia Kubrak",
-];
+import { introductionContent, booksContent } from "./content";
 
 const LiteratureReview: React.FC = () => {
   const { currentTheme } = useTimeContext();
-  const [activeBook, setActiveBook] = useState(1);
+  const [activeSection, setActiveSection] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isClient, setIsClient] = useState(false);
 
-  const updateActiveBook = useCallback(() => {
+  const updateActiveSection = useCallback(() => {
     if (typeof window === "undefined" || !containerRef.current) return;
     const container = containerRef.current;
     const { scrollTop, clientHeight } = container;
     const middleOfScreen = scrollTop + clientHeight / 2;
 
-    for (let i = 1; i <= books.length; i++) {
-      const element = container.querySelector(`#book-${i}`);
+    for (let i = 0; i <= booksContent.length; i++) {
+      const element = container.querySelector(`#section-${i}`);
       if (element) {
         const rect = element.getBoundingClientRect();
         const elementTop = rect.top + container.scrollTop;
@@ -43,21 +35,23 @@ const LiteratureReview: React.FC = () => {
           elementTop <= middleOfScreen &&
           elementTop + rect.height > middleOfScreen
         ) {
-          setActiveBook(i);
+          setActiveSection(i);
           break;
         }
       }
     }
   }, []);
 
-  const debouncedUpdateActiveBook = useMemo(
-    () => debounce(updateActiveBook, 50),
-    [updateActiveBook]
+  const debouncedUpdateActiveSection = useMemo(
+    () => debounce(updateActiveSection, 50),
+    [updateActiveSection]
   );
 
-  const scrollToBook = useCallback((bookNumber: number) => {
+  const scrollToSection = useCallback((sectionNumber: number) => {
     if (typeof window === "undefined" || !containerRef.current) return;
-    const element = containerRef.current.querySelector(`#book-${bookNumber}`);
+    const element = containerRef.current.querySelector(
+      `#section-${sectionNumber}`
+    );
     if (element) {
       const rect = element.getBoundingClientRect();
       const scrollTop = containerRef.current.scrollTop;
@@ -66,7 +60,7 @@ const LiteratureReview: React.FC = () => {
         top: elementTop,
         behavior: "smooth",
       });
-      setActiveBook(bookNumber);
+      setActiveSection(sectionNumber);
     }
   }, []);
 
@@ -78,14 +72,14 @@ const LiteratureReview: React.FC = () => {
     if (!isClient) return;
     const container = containerRef.current;
     if (container) {
-      container.addEventListener("scroll", debouncedUpdateActiveBook);
+      container.addEventListener("scroll", debouncedUpdateActiveSection);
       return () =>
-        container.removeEventListener("scroll", debouncedUpdateActiveBook);
+        container.removeEventListener("scroll", debouncedUpdateActiveSection);
     }
-  }, [debouncedUpdateActiveBook, isClient]);
+  }, [debouncedUpdateActiveSection, isClient]);
 
   const bookHeights = useMemo(
-    () => books.map(() => Math.floor(Math.random() * 50) + 100),
+    () => [0, ...booksContent.map(() => Math.floor(Math.random() * 50) + 100)],
     []
   );
 
@@ -110,19 +104,19 @@ const LiteratureReview: React.FC = () => {
           <div className="flex flex-col p-6 pl-8 pt-10">
             <div className="flex justify-between items-end">
               <div className="w-1/2 flex justify-start items-end">
-                {[1, 2, 3, 4, 5, 6].map((num) => (
+                {[0, ...booksContent.map((_, i) => i + 1)].map((num) => (
                   <div
                     key={num}
                     style={{
-                      height: `${bookHeights[num - 1]}px`,
-                      marginLeft: num === 1 ? "0" : "-1px",
+                      height: `${bookHeights[num]}px`,
+                      marginLeft: num === 0 ? "0" : "-1px",
                     }}
                     className={`w-8 flex flex-col justify-end border border-alt cursor-pointer ${
-                      activeBook === num
+                      activeSection === num
                         ? "bg-alt text-main"
                         : "bg-main text-alt"
                     }`}
-                    onClick={() => scrollToBook(num)}
+                    onClick={() => scrollToSection(num)}
                   >
                     <div className="text-center pb-1">{num}</div>
                   </div>
@@ -141,71 +135,57 @@ const LiteratureReview: React.FC = () => {
               </div>
             </div>
             <div className="pt-8">
-              <h2 className="font-bold mb-2">Introduction</h2>
-              {books.map((book, index) => {
-                const [author, title] = book.split(" by ");
-                return (
-                  <p
-                    key={index}
-                    className={`mb-2 cursor-pointer ${
-                      activeBook === index + 1 ? "underline" : ""
-                    }`}
-                    onClick={() => scrollToBook(index + 1)}
-                  >
-                    {`${index + 1}. `}
-                    <span className="italic">{author}</span>
-                    {" by "}
-                    {title}
-                  </p>
-                );
-              })}
+              <h2
+                className={`font-bold mb-2 cursor-pointer ${
+                  activeSection === 0 ? "underline" : ""
+                }`}
+                onClick={() => scrollToSection(0)}
+              >
+                Introduction
+              </h2>
+              {booksContent.map((book, index) => (
+                <p
+                  key={index}
+                  className={`mb-2 cursor-pointer ${
+                    activeSection === index + 1 ? "underline" : ""
+                  }`}
+                  onClick={() => scrollToSection(index + 1)}
+                >
+                  {`${index + 1}. `}
+                  <span className="italic">{book.title}</span>
+                  {" by "}
+                  {book.author}
+                </p>
+              ))}
             </div>
           </div>
         </div>
         <div className="container-box overflow-y-auto" ref={containerRef}>
-          {books.map((book, index) => {
-            const [title, author] = book.split(" by ");
-            return (
-              <div
-                key={index}
-                className="p-8 border-b border-alt"
-                id={`book-${index + 1}`}
-              >
-                <h2 className="text-3xl font-bold mb-2">{title}</h2>
-                <h3 className="text-xl italic mb-4">by {author}</h3>
-                <p className="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                  minim veniam, quis nostrud exercitation ullamco laboris nisi
-                  ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                  amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                  ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat.
-                </p>
+          <div className="p-8 border-b border-alt" id="section-0">
+            <div className="flex items-center">
+              <h2 className="text-3xl font-bold mb-4 ml-2">Introduction</h2>
+            </div>
+            <p
+              className="text-sm"
+              dangerouslySetInnerHTML={{ __html: introductionContent }}
+            ></p>
+          </div>
+          {booksContent.map((book, index) => (
+            <div
+              key={index}
+              className="p-8 border-b border-alt"
+              id={`section-${index + 1}`}
+            >
+              <div className="flex items-center">
+                <h2 className="text-3xl font-bold mb-2 ml-2">{book.title}</h2>
               </div>
-            );
-          })}
+              <h3 className="text-xl italic mb-4">by {book.author}</h3>
+              <p
+                className="text-sm"
+                dangerouslySetInnerHTML={{ __html: book.content }}
+              ></p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

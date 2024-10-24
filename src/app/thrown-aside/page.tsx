@@ -1,21 +1,34 @@
+// src/app/thrown-aside/page.tsx
+
 "use client";
 
-import React from "react";
-import { useTimeContext } from "../../hooks/useTimeContext";
+import React, { useEffect, useState } from "react";
+import ArtifactLayout from "../../components/ArtifactLayout";
+import Artifact1 from "./artifacts/Artifact1";
 
-const ThrownAside: React.FC = () => {
-  const { currentTheme } = useTimeContext();
+const artifacts = ["Artifact 1", "Artifact 2", "Artifact 3", "Artifact 4"];
 
+const ThrownAsidePage = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // or a loading indicator
+  }
   return (
-    <div
-      className={`min-h-screen p-0 m-0 bg-alt text-alt ${
-        currentTheme === "dark" ? "text-white" : "text-black"
-      }`}
+    <ArtifactLayout
+      title="Thrown Aside"
+      description="Explore the artifacts related to Lock and Dam One/Ford Dam."
+      parentPage="thrown-aside"
+      artifacts={artifacts}
+      currentArtifact="Artifact 1"
     >
-      <h1>ThrownAside Content</h1>
-      {/* Add your page-specific content here */}
-    </div>
+      <Artifact1 />
+    </ArtifactLayout>
   );
 };
 
-export default ThrownAside;
+export default ThrownAsidePage;

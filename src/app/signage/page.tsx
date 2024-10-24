@@ -1,21 +1,34 @@
+// src/app/signage/page.tsx
+
 "use client";
 
-import React from "react";
-import { useTimeContext } from "../../hooks/useTimeContext";
+import React, { useEffect, useState } from "react";
+import ArtifactLayout from "../../components/ArtifactLayout";
+import Artifact1 from "./artifacts/Artifact1";
 
-const Signage: React.FC = () => {
-  const { currentTheme } = useTimeContext();
+const artifacts = ["Artifact 1", "Artifact 2", "Artifact 3", "Artifact 4"];
 
+const SignagePage = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // or a loading indicator
+  }
   return (
-    <div
-      className={`min-h-screen p-0 m-0 bg-alt text-alt ${
-        currentTheme === "dark" ? "text-white" : "text-black"
-      }`}
+    <ArtifactLayout
+      title="Signage"
+      description="Explore the artifacts related to Lock and Dam One/Ford Dam."
+      parentPage="signage"
+      artifacts={artifacts}
+      currentArtifact="Artifact 1"
     >
-      <h1>Signage Content</h1>
-      {/* Add your page-specific content here */}
-    </div>
+      <Artifact1 />
+    </ArtifactLayout>
   );
 };
 
-export default Signage;
+export default SignagePage;

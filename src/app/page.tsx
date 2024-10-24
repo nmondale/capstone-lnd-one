@@ -38,7 +38,7 @@ const HomePage = () => {
           <div className="w-[42%] container-box flex flex-col">
             <div className="flex justify-between items-center p-10">
               <h1 className="text-sm ">
-                Infrastructures of Imagining, <br /> Imagining Infrastructure:{" "}
+                Seeing Yourself <br /> in Your Structure:{" "}
                 <p className="font-bold">Lock and Dam One/Ford Dam</p>
               </h1>
               <h2 className="text-sm text-right">

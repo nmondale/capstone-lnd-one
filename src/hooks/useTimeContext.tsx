@@ -62,7 +62,7 @@ export const TimeProvider: React.FC<{ children: React.ReactNode }> = ({
 
   useEffect(() => {
     updateTime();
-    const interval = setInterval(updateTime, 60000); // Update every minute
+    const interval = setInterval(updateTime, 1000); //update every second
 
     return () => clearInterval(interval);
   }, [updateTime]);
