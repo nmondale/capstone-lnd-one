@@ -27,7 +27,7 @@ const ArtifactLayout: React.FC<ArtifactLayoutProps> = ({
 
   return (
     <div
-      className={`min-h-screen bg-main text-alt ${
+      className={`min-h-screen bg-alt text-alt ${
         currentTheme === "dark" ? "text-white" : "text-black"
       }`}
     >

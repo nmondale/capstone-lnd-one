@@ -1,9 +1,21 @@
 import React from "react";
+import styles from "../styles/signagestyles.module.css";
 
 const Artifact1: React.FC = () => {
   return (
-    <div className="p-8">
-      <h2 className="text-3xl font-bold mb-4">artifact 1 !!!!</h2>
+    <div className={styles.signageContainer}>
+      <div className={styles.sign}>
+        <div className={styles.front}>
+          <div className="font-bold flex items-center justify-center border-b border-alt">
+            &lt;- Return Home
+          </div>
+        </div>
+        <div className={styles.back}>
+          <div className="font-bold flex items-center justify-center border-b border-main">
+            &lt;- Return Home
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

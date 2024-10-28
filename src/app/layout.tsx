@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Cardo } from "next/font/google";
+import { Cardo, DM_Sans } from "next/font/google";
 import TimeProviderWrapper from "../components/TimeProviderWrapper";
 
 const geistSans = localFont({
@@ -21,6 +21,12 @@ const cardo = Cardo({
   variable: "--font-cardo",
 });
 
+const dmSans = DM_Sans({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+});
+
 export const metadata: Metadata = {
   title: "Lock and Dam One",
   description: "Sample Description",
@@ -34,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${cardo.variable} antialiased`}
+        className={`${geistSans.variable} ${dmSans.variable} ${geistMono.variable} ${cardo.variable} antialiased`}
       >
         <TimeProviderWrapper>{children}</TimeProviderWrapper>
       </body>
