@@ -59,13 +59,15 @@ const HomePage = () => {
           </div>
           <div className="w-[38%] container-box">
             <p className="text-sm p-8 text-justify">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-              tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-              consequat. Duis autem vel eum iriure dolor in hendrerit in
-              vulputate velit esse molestie consequat, vel illum dolore eu
-              feugiat nulla{" "}
+              <i> Seeing Yourself in Your Structure </i> reimagines Lock and Dam
+              1 as an online gallery that examines how built infrastructure,
+              both physical and digital, constrains and shapes our interactions,
+              values, and ideologies. Using this website as an exhibition space,
+              it parallels the dam’s control of river flow with the digital
+              world’s influence over knowledge, identity, and communal
+              understanding, inviting viewers to engage critically with
+              speculative design as a method for envisioning alternative and
+              ethically reflective infrastructures.{" "}
             </p>
           </div>
           <div className="w-[20%] container-box flex items-center justify-center">

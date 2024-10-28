@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST='{"app/page.tsx -> ../components/FishNavigation":{"id":2912,"files":["static/chunks/b4fff3dd.a450ae19d3631b32.js","static/chunks/912.ef71f063c5e66ff1.js"]}}';
+self.__REACT_LOADABLE_MANIFEST="{\"app/page.tsx -> ../components/FishNavigation\":{\"id\":\"app/page.tsx -> ../components/FishNavigation\",\"files\":[\"static/chunks/_app-pages-browser_src_components_FishNavigation_tsx.js\"]}}"
