@@ -9,12 +9,18 @@ interface IconProps {
   className?: string;
 }
 
-const MoonIcon: React.FC<IconProps> = (props) => <MoonIconSVG {...props} />;
+const MoonIcon: React.FC<IconProps> = (props) => (
+  <MoonIconSVG {...props} />
+);
 const SunriseIcon: React.FC<IconProps> = (props) => (
   <SunriseIconSVG {...props} />
 );
-const SunIcon: React.FC<IconProps> = (props) => <SunIconSVG {...props} />;
-const SunsetIcon: React.FC<IconProps> = (props) => <SunsetIconSVG {...props} />;
+const SunIcon: React.FC<IconProps> = (props) => (
+  <SunIconSVG {...props} />
+);
+const SunsetIcon: React.FC<IconProps> = (props) => (
+  <SunsetIconSVG {...props} />
+);
 
 export const TimeIcon: React.FC = () => {
   const { currentTime, currentTheme } = useTimeContext();

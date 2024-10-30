@@ -1,40 +1,135 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
+    "/_not-found/page": [
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/chunks/app/_not-found/page-5d52909c9e95806c.js"
     ],
     "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/css/f1ef23c17e695734.css",
+      "static/chunks/app/layout-a53e5ec3003961d3.js"
     ],
-    "/signage/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/signage/page.css",
-      "static/chunks/app/signage/page.js"
+    "/im-here/[artifact]/page": [
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/css/a5c3b26f8f971c62.css",
+      "static/chunks/648-26ba7391c7445218.js",
+      "static/chunks/app/im-here/[artifact]/page-2a7f3c0d4c8a2235.js"
     ],
-    "/thrown-aside/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/thrown-aside/page.css",
-      "static/chunks/app/thrown-aside/page.js"
+    "/audiovisual/[artifact]/page": [
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/css/a5c3b26f8f971c62.css",
+      "static/chunks/648-26ba7391c7445218.js",
+      "static/chunks/app/audiovisual/[artifact]/page-3f0ce17ff32c8b1a.js"
     ],
-    "/poetrytext/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/poetrytext/page.css",
-      "static/chunks/app/poetrytext/page.js"
+    "/audiovisual/page": [
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/css/a5c3b26f8f971c62.css",
+      "static/chunks/648-26ba7391c7445218.js",
+      "static/chunks/app/audiovisual/page-8d2cdede26cfec26.js"
+    ],
+    "/litreview/page": [
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/css/a5c3b26f8f971c62.css",
+      "static/chunks/648-26ba7391c7445218.js",
+      "static/chunks/app/litreview/page-d9e1ce48021df8a8.js"
     ],
     "/im-here/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/im-here/page.css",
-      "static/chunks/app/im-here/page.js"
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/css/a5c3b26f8f971c62.css",
+      "static/chunks/648-26ba7391c7445218.js",
+      "static/chunks/app/im-here/page-bd2fe3603b02331c.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/css/a5c3b26f8f971c62.css",
+      "static/chunks/648-26ba7391c7445218.js",
+      "static/chunks/app/page-3c8b43ac0722dca6.js"
+    ],
+    "/poetrytext/[artifact]/page": [
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/css/a5c3b26f8f971c62.css",
+      "static/chunks/b536a0f1-83972cf1a8991749.js",
+      "static/chunks/a3cd4a83-16282028ad607fd5.js",
+      "static/chunks/648-26ba7391c7445218.js",
+      "static/chunks/550-a435403e7867247e.js",
+      "static/chunks/app/poetrytext/[artifact]/page-a31204c6934c3340.js"
+    ],
+    "/signage/[artifact]/page": [
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/css/a5c3b26f8f971c62.css",
+      "static/chunks/648-26ba7391c7445218.js",
+      "static/chunks/406-7147f695622008a0.js",
+      "static/chunks/app/signage/[artifact]/page-0cfdec32ef25a5e9.js"
+    ],
+    "/signage/page": [
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/css/a5c3b26f8f971c62.css",
+      "static/chunks/648-26ba7391c7445218.js",
+      "static/chunks/406-7147f695622008a0.js",
+      "static/chunks/app/signage/page-bc4c0ea5cadad430.js"
+    ],
+    "/thrown-aside/[artifact]/page": [
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/css/a5c3b26f8f971c62.css",
+      "static/chunks/648-26ba7391c7445218.js",
+      "static/chunks/app/thrown-aside/[artifact]/page-e0195acbaa3c709f.js"
+    ],
+    "/poetrytext/page": [
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/css/a5c3b26f8f971c62.css",
+      "static/chunks/b536a0f1-83972cf1a8991749.js",
+      "static/chunks/a3cd4a83-16282028ad607fd5.js",
+      "static/chunks/648-26ba7391c7445218.js",
+      "static/chunks/550-a435403e7867247e.js",
+      "static/chunks/app/poetrytext/page-6421763e02c02dad.js"
+    ],
+    "/thrown-aside/page": [
+      "static/chunks/webpack-d1936ba348aa2858.js",
+      "static/chunks/fd9d1056-5bc63bfeed71c730.js",
+      "static/chunks/117-8e0bd315b7632aa7.js",
+      "static/chunks/main-app-ce6de431a951ee85.js",
+      "static/css/a5c3b26f8f971c62.css",
+      "static/chunks/648-26ba7391c7445218.js",
+      "static/chunks/app/thrown-aside/page-ae5d3047474b882d.js"
     ]
   }
 }
