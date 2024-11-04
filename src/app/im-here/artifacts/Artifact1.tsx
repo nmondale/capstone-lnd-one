@@ -1,15 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
+import { imageUrls } from "../../../utils/imageUrls";
 
 const Artifact1: React.FC = () => {
   const [[imgWidth, imgHeight], setSize] = useState([0, 0]);
   const [[x, y], setXY] = useState([0, 0]);
   const [showMagnifier, setShowMagnifier] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const magnifierHeight = 200;
   const magnifierWidth = 500;
   const zoomLevel = 9;
+
+  const imageUrl = imageUrls.imHere.artifact1.url;
 
   return (
     <div className="relative">
@@ -21,17 +25,21 @@ const Artifact1: React.FC = () => {
         }}
       >
         <img
-          src="/images/im-here/artifact1.png"
-          alt="Artifact 1"
+          src={imageUrl}
+          alt={imageUrls.imHere.artifact1.alt}
+          loading="lazy"
+          onLoad={() => setIsImageLoaded(true)}
           style={{
             width: "100%",
             height: "100%",
             objectFit: "cover",
             maxHeight: "100vh",
             cursor: "none",
+            opacity: isImageLoaded ? 1 : 0,
+            transition: "opacity 0.3s ease-in-out",
           }}
           onMouseEnter={(e) => {
-            // Get image size
+            if (!isImageLoaded) return;
             const elem = e.currentTarget;
             const { width, height } = elem.getBoundingClientRect();
             setSize([width, height]);
@@ -41,7 +49,7 @@ const Artifact1: React.FC = () => {
             setShowMagnifier(false);
           }}
           onMouseMove={(e) => {
-            // Calculate cursor position
+            if (!isImageLoaded) return;
             const elem = e.currentTarget;
             const { top, left } = elem.getBoundingClientRect();
             const x = e.pageX - left - window.scrollX;
@@ -50,7 +58,7 @@ const Artifact1: React.FC = () => {
           }}
         />
 
-        {showMagnifier && (
+        {showMagnifier && isImageLoaded && (
           <div
             style={{
               display: showMagnifier ? "" : "none",
@@ -63,7 +71,7 @@ const Artifact1: React.FC = () => {
               opacity: "1",
               border: "2px solid var(--alt-color)",
               backgroundColor: "white",
-              backgroundImage: `url('/images/im-here/artifact1.png')`,
+              backgroundImage: `url(${imageUrl})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: `${imgWidth * zoomLevel}px ${
                 imgHeight * zoomLevel
