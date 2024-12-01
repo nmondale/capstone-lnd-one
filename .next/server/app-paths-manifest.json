@@ -1,9 +1,6 @@
 {
-  "/signage/page": "app/signage/page.js",
-  "/audiovisual/page": "app/audiovisual/page.js",
-  "/audiovisual/[artifact]/page": "app/audiovisual/[artifact]/page.js",
-  "/im-here/page": "app/im-here/page.js",
-  "/page": "app/page.js",
-  "/im-here/[artifact]/page": "app/im-here/[artifact]/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/api/vessel-traffic/route": "app/api/vessel-traffic/route.js",
+  "/thrown-aside/[artifact]/page": "app/thrown-aside/[artifact]/page.js",
+  "/thrown-aside/page": "app/thrown-aside/page.js",
+  "/page": "app/page.js"
 }

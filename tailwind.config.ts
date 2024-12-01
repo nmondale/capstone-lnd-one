@@ -60,6 +60,7 @@ const config: Config = {
   	colors: {
   		main: 'var(--main-color)',
   		alt: 'var(--alt-color)',
+      brightBlue: 'var(--bright-blue)',
   	},
   },
   plugins: [require("tailwindcss-animate")],

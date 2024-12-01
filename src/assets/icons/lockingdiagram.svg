@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 681.79 1113.41">
+  <defs>
+    <style>
+      .d {
+        fill: var(--bright-blue);
+      }
+
+      .d, .e, .f, .g, .h {
+        stroke-miterlimit: 10;
+      }
+
+      .d, .e, .g {
+        stroke: var(--bright-blue);
+      }
+
+      .i, .j, .k {
+        font-family: Cardo-Bold, Cardo;
+        font-weight: 700;
+      }
+
+      .i, .e, .h {
+        fill: var(--main-color);
+      }
+
+      .i, .k {
+        font-size: 15.63px;
+      }
+
+      .l {
+        font-family: Cardo-Italic, Cardo;
+        font-size: 37.62px;
+        font-style: italic;
+      }
+
+      .l, .m, .n, .o, .k {
+        fill: var(--alt-color);
+      }
+
+      .m, .o {
+        font-size: 12px;
+      }
+
+      .p {
+        letter-spacing: 0em;
+      }
+
+      .q, .o {
+        font-family: Cardo-Regular, Cardo;
+      }
+
+      .r {
+        letter-spacing: 0em;
+      }
+
+      .f, .g {
+        fill: none;
+      }
+
+      .f, .h {
+        stroke: var(--alt-color);
+      }
+
+      .s {
+        letter-spacing: -.14em;
+      }
+
+      .t {
+        letter-spacing: -.02em;
+      }
+
+      .u {
+        letter-spacing: -.02em;
+      }
+
+      .v {
+        letter-spacing: -.05em;
+      }
+
+      .w {
+        letter-spacing: -.05em;
+      }
+
+      .x {
+        letter-spacing: -.06em;
+      }
+
+      .y {
+        letter-spacing: -.04em;
+      }
+
+      .z {
+        letter-spacing: -.03em;
+      }
+
+      .aa {
+        letter-spacing: -.03em;
+      }
+
+      .ab {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g id="c" data-name="Layer 1">
+    <g>
+      <rect class="h" x=".5" y=".5" width="680.79" height="370.8"/>
+      <rect class="h" x=".5" y="371.3" width="680.79" height="370.8"/>
+      <rect class="h" x=".5" y="742.1" width="680.79" height="370.8"/>
+      <g>
+        <polygon class="h" points="154.34 230.33 432.33 230.33 432.33 115.69 186.15 115.69 154.34 230.33"/>
+        <rect class="f" x="404.32" y="115.69" width="28.01" height="128.08"/>
+        <rect class="d" x="50.88" y="199.64" width="155.23" height="44.13"/>
+        <rect class="h" x="495.11" y="97.73" width="38.08" height="13.66"/>
+        <rect class="h" x="495.11" y="84.07" width="38.08" height="13.66"/>
+        <line class="h" x1="606.23" y1="40.16" x2="606.23" y2="67.98"/>
+        <line class="h" x1="612.95" y1="48.44" x2="599.51" y2="48.44"/>
+        <line class="h" x1="612.95" y1="52.65" x2="599.51" y2="52.65"/>
+        <polygon class="n" points="614.09 107.67 614.09 74.35 619.53 64.5 597.44 64.5 597.44 73.33 592.74 73.33 588.52 77.11 565.42 77.43 559.34 82.42 559.34 94.65 545.13 95.22 540.52 101.3 540.52 107.67 614.09 107.67"/>
+        <polygon class="h" points="478.8 105.63 492.05 141.29 644.69 141.29 656.59 105.63 478.8 105.63"/>
+        <rect class="d" x="224.85" y="141.16" width="384.47" height="102.61"/>
+        <polygon class="h" points="392.33 211.39 392.33 243.69 50.88 243.69 50.88 321.3 609.32 321.3 609.32 243.69 609.32 211.39 392.33 211.39"/>
+        <rect class="n" x="206.11" y="115.69" width="23.03" height="128.08"/>
+        <text class="i" transform="translate(246.67 202)"><tspan x="0" y="0">Lock</tspan><tspan x="0" y="18.76">Cham</tspan><tspan class="z" x="44" y="18.76">b</tspan><tspan class="y" x="52.51" y="18.76">e</tspan><tspan class="r" x="59.61" y="18.76">r</tspan></text>
+        <text class="m" transform="translate(164.71 297.96)"><tspan class="q"><tspan x="0" y="0">Emptying Valve</tspan></tspan><tspan class="j"><tspan x="15.43" y="14.4">CLOSED</tspan></tspan></text>
+        <text class="m" transform="translate(416.8 297.96)"><tspan class="q"><tspan x="0" y="0">Filler Valve</tspan></tspan><tspan class="j"><tspan x="10.77" y="14.4">OPEN</tspan></tspan></text>
+        <text class="o" transform="translate(540.25 227.74)"><tspan x="0" y="0">Water</tspan><tspan x="0" y="14.4">Intake</tspan></text>
+        <text class="i" transform="translate(551.84 166.56)"><tspan x="0" y="0">Up</tspan><tspan class="aa" x="21.66" y="0">p</tspan><tspan class="y" x="30.1" y="0">e</tspan><tspan x="37.2" y="0">r </tspan><tspan x="10.19" y="18.76">L</tspan><tspan class="u" x="20.1" y="18.76">e</tspan><tspan class="v" x="27.47" y="18.76">v</tspan><tspan x="35.38" y="18.76">el</tspan></text>
+        <text class="k" transform="translate(408.59 64.5)"><tspan x="0" y="0">Up</tspan><tspan class="aa" x="21.66" y="0">p</tspan><tspan class="y" x="30.1" y="0">e</tspan><tspan x="37.2" y="0">r</tspan><tspan x="4.06" y="18.76">G</tspan><tspan class="ab" x="16.77" y="18.76">a</tspan><tspan x="24.44" y="18.76">tes</tspan><tspan x="-3.94" y="37.51">OPEN</tspan></text>
+        <text class="k" transform="translate(186.11 61.06)"><tspan x="0" y="0">L</tspan><tspan class="w" x="9.91" y="0">o</tspan><tspan class="x" x="18.2" y="0">w</tspan><tspan class="y" x="30.49" y="0">e</tspan><tspan x="37.59" y="0">r</tspan><tspan x="0" y="18.76">G</tspan><tspan class="ab" x="12.71" y="18.76">a</tspan><tspan x="20.38" y="18.76">tes</tspan><tspan x="0" y="37.51">CLOSED</tspan></text>
+        <text class="k" transform="translate(498.89 128.77)"><tspan class="s" x="0" y="0">V</tspan><tspan class="p" x="10.03" y="0">essel</tspan></text>
+        <text class="i" transform="translate(61.87 230.33)"><tspan x="0" y="0">L</tspan><tspan class="w" x="9.91" y="0">o</tspan><tspan class="x" x="18.2" y="0">w</tspan><tspan class="y" x="30.49" y="0">e</tspan><tspan x="37.59" y="0">r L</tspan><tspan class="t" x="57.98" y="0">e</tspan><tspan class="v" x="65.34" y="0">v</tspan><tspan x="73.26" y="0">el</tspan></text>
+        <rect class="e" x="472.05" y="211.39" width="13.44" height="70.55"/>
+        <rect class="e" x="240.75" y="243.76" width="13.44" height="38.17"/>
+        <rect class="e" x="150.62" y="243.76" width="13.44" height="38.17"/>
+        <rect class="e" x="260.12" y="243.76" width="13.44" height="38.17"/>
+        <rect class="e" x="279.49" y="243.76" width="13.44" height="38.17"/>
+        <rect class="e" x="298.87" y="243.76" width="13.44" height="38.17"/>
+        <rect class="e" x="318.24" y="243.76" width="13.44" height="38.17"/>
+        <rect class="e" x="337.61" y="243.76" width="13.44" height="38.17"/>
+        <rect class="e" x="356.99" y="243.76" width="13.44" height="38.17"/>
+        <rect class="e" x="495.36" y="211.39" width="13.44" height="70.55"/>
+        <rect class="e" x="519.66" y="211.39" width="13.44" height="70.55"/>
+        <rect class="g" x="335.18" y="83.93" width="13.44" height="382.57" transform="translate(617.12 -66.69) rotate(90)"/>
+        <g>
+          <polygon class="n" points="206.11 270.9 212.73 261.8 199.48 261.8 206.11 270.9"/>
+          <rect class="n" x="199.39" y="268.5" width="13.44" height="13.44"/>
+        </g>
+        <g>
+          <polygon class="h" points="445.77 270.98 452.4 261.88 439.15 261.88 445.77 270.98"/>
+          <rect class="h" x="439.05" y="268.58" width="13.44" height="13.44"/>
+        </g>
+        <g>
+          <line class="d" x1="478.77" y1="191.39" x2="478.77" y2="234.64"/>
+          <polygon class="d" points="478.77 240.39 483.03 234.53 474.5 234.53 478.77 240.39"/>
+        </g>
+        <g>
+          <line class="d" x1="502.08" y1="191.39" x2="502.08" y2="234.64"/>
+          <polygon class="d" points="502.08 240.39 506.34 234.53 497.82 234.53 502.08 240.39"/>
+        </g>
+        <g>
+          <line class="d" x1="526.38" y1="191.39" x2="526.38" y2="234.64"/>
+          <polygon class="d" points="526.38 240.39 530.64 234.53 522.11 234.53 526.38 240.39"/>
+        </g>
+      </g>
+      <g>
+        <polygon class="h" points="154.34 601.13 432.33 601.13 432.33 486.49 186.15 486.49 154.34 601.13"/>
+        <rect class="h" x="246.93" y="504.19" width="38.08" height="13.66"/>
+        <rect class="h" x="246.93" y="490.53" width="38.08" height="13.66"/>
+        <line class="h" x1="358.04" y1="446.62" x2="358.04" y2="474.44"/>
+        <line class="h" x1="364.76" y1="454.9" x2="351.32" y2="454.9"/>
+        <line class="h" x1="364.76" y1="459.12" x2="351.32" y2="459.12"/>
+        <polygon class="n" points="365.91 514.13 365.91 480.82 371.35 470.96 349.25 470.96 349.25 479.8 344.56 479.8 340.33 483.57 317.23 483.89 311.15 488.89 311.15 501.11 296.94 501.69 292.33 507.77 292.33 514.13 365.91 514.13"/>
+        <polygon class="h" points="230.61 512.09 243.86 547.76 396.5 547.76 408.4 512.09 230.61 512.09"/>
+        <text class="k" transform="translate(250.7 535.23)"><tspan class="s" x="0" y="0">V</tspan><tspan class="p" x="10.03" y="0">essel</tspan></text>
+        <rect class="d" x="50.88" y="570.44" width="155.23" height="44.13"/>
+        <rect class="d" x="432.33" y="511.96" width="176.98" height="102.61"/>
+        <rect class="d" x="223.97" y="547.76" width="195.44" height="66.81"/>
+        <rect class="n" x="409.87" y="486.49" width="23.03" height="128.08"/>
+        <polygon class="h" points="392.33 582.19 392.33 614.49 50.88 614.49 50.88 692.1 609.32 692.1 609.32 614.49 609.32 582.19 392.33 582.19"/>
+        <text class="i" transform="translate(246.67 572.81)"><tspan x="0" y="0">Lock</tspan><tspan x="0" y="18.76">Cham</tspan><tspan class="z" x="44" y="18.76">b</tspan><tspan class="y" x="52.51" y="18.76">e</tspan><tspan class="r" x="59.61" y="18.76">r</tspan></text>
+        <text class="m" transform="translate(164.71 668.77)"><tspan class="q"><tspan x="0" y="0">Emptying Valve</tspan></tspan><tspan class="j"><tspan x="23.19" y="14.4">OPEN</tspan></tspan></text>
+        <text class="m" transform="translate(416.8 668.77)"><tspan class="q"><tspan x="0" y="0">Filler Valve</tspan></tspan><tspan class="j"><tspan x="3" y="14.4">CLOSED</tspan></tspan></text>
+        <text class="i" transform="translate(551.84 537.36)"><tspan x="0" y="0">Up</tspan><tspan class="aa" x="21.66" y="0">p</tspan><tspan class="y" x="30.1" y="0">e</tspan><tspan x="37.2" y="0">r </tspan><tspan x="10.19" y="18.76">L</tspan><tspan class="u" x="20.1" y="18.76">e</tspan><tspan class="v" x="27.47" y="18.76">v</tspan><tspan x="35.38" y="18.76">el</tspan></text>
+        <text class="k" transform="translate(408.59 435.3)"><tspan x="0" y="0">Up</tspan><tspan class="aa" x="21.66" y="0">p</tspan><tspan class="y" x="30.1" y="0">e</tspan><tspan x="37.2" y="0">r</tspan><tspan x="4.06" y="18.76">G</tspan><tspan class="ab" x="16.77" y="18.76">a</tspan><tspan x="24.44" y="18.76">tes</tspan><tspan x="-24.17" y="37.51">CLOSED</tspan></text>
+        <text class="k" transform="translate(176.11 431.87)"><tspan x="0" y="0">L</tspan><tspan class="w" x="9.91" y="0">o</tspan><tspan class="x" x="18.2" y="0">w</tspan><tspan class="y" x="30.49" y="0">e</tspan><tspan x="37.59" y="0">r</tspan><tspan x="0" y="18.76">G</tspan><tspan class="ab" x="12.71" y="18.76">a</tspan><tspan x="20.38" y="18.76">tes</tspan><tspan x="0" y="37.51">CLOSED</tspan></text>
+        <text class="i" transform="translate(61.87 601.13)"><tspan x="0" y="0">L</tspan><tspan class="w" x="9.91" y="0">o</tspan><tspan class="x" x="18.2" y="0">w</tspan><tspan class="y" x="30.49" y="0">e</tspan><tspan x="37.59" y="0">r L</tspan><tspan class="t" x="57.98" y="0">e</tspan><tspan class="v" x="65.34" y="0">v</tspan><tspan x="73.26" y="0">el</tspan></text>
+        <rect class="e" x="472.05" y="582.19" width="13.44" height="70.55"/>
+        <rect class="e" x="240.75" y="614.57" width="13.44" height="38.17"/>
+        <rect class="e" x="150.62" y="614.57" width="13.44" height="38.17"/>
+        <rect class="e" x="260.12" y="614.57" width="13.44" height="38.17"/>
+        <rect class="e" x="279.49" y="614.57" width="13.44" height="38.17"/>
+        <rect class="e" x="298.87" y="614.57" width="13.44" height="38.17"/>
+        <rect class="e" x="318.24" y="614.57" width="13.44" height="38.17"/>
+        <rect class="e" x="337.61" y="614.57" width="13.44" height="38.17"/>
+        <rect class="e" x="356.99" y="614.57" width="13.44" height="38.17"/>
+        <rect class="e" x="495.36" y="582.19" width="13.44" height="70.55"/>
+        <rect class="e" x="519.66" y="582.19" width="13.44" height="70.55"/>
+        <rect class="g" x="335.18" y="454.73" width="13.44" height="382.57" transform="translate(987.92 304.12) rotate(90)"/>
+        <g>
+          <polygon class="h" points="206.11 641.7 212.73 632.6 199.48 632.6 206.11 641.7"/>
+          <rect class="h" x="199.39" y="639.3" width="13.44" height="13.44"/>
+        </g>
+        <g>
+          <polygon class="n" points="445.77 641.78 452.4 632.68 439.15 632.68 445.77 641.78"/>
+          <rect class="n" x="439.05" y="639.38" width="13.44" height="13.44"/>
+        </g>
+        <g>
+          <line class="d" x1="247.47" y1="600.38" x2="247.47" y2="643.63"/>
+          <polygon class="d" points="247.47 649.38 251.73 643.52 243.2 643.52 247.47 649.38"/>
+        </g>
+        <line class="d" x1="240.75" y1="646.02" x2="160.08" y2="646.02"/>
+        <polygon class="d" points="154.34 646.02 160.19 650.28 160.19 641.76 154.34 646.02"/>
+        <g>
+          <line class="d" x1="157.34" y1="639.07" x2="157.34" y2="595.82"/>
+          <polygon class="d" points="157.34 590.07 153.08 595.92 161.6 595.92 157.34 590.07"/>
+        </g>
+        <g>
+          <line class="d" x1="266.84" y1="600.38" x2="266.84" y2="643.63"/>
+          <polygon class="d" points="266.84 649.38 271.11 643.52 262.58 643.52 266.84 649.38"/>
+        </g>
+        <g>
+          <line class="d" x1="286.21" y1="600.38" x2="286.21" y2="643.63"/>
+          <polygon class="d" points="286.21 649.38 290.48 643.52 281.95 643.52 286.21 649.38"/>
+        </g>
+        <g>
+          <line class="d" x1="305.59" y1="600.38" x2="305.59" y2="643.63"/>
+          <polygon class="d" points="305.59 649.38 309.85 643.52 301.32 643.52 305.59 649.38"/>
+        </g>
+        <g>
+          <line class="d" x1="324.96" y1="600.38" x2="324.96" y2="643.63"/>
+          <polygon class="d" points="324.96 649.38 329.22 643.52 320.7 643.52 324.96 649.38"/>
+        </g>
+        <g>
+          <line class="d" x1="344.33" y1="600.38" x2="344.33" y2="643.63"/>
+          <polygon class="d" points="344.33 649.38 348.6 643.52 340.07 643.52 344.33 649.38"/>
+        </g>
+        <g>
+          <line class="d" x1="363.71" y1="600.38" x2="363.71" y2="643.63"/>
+          <polygon class="d" points="363.71 649.38 367.97 643.52 359.44 643.52 363.71 649.38"/>
+        </g>
+        <rect class="n" x="206.11" y="486.49" width="23.03" height="128.08"/>
+        <line class="h" x1="212.83" y1="639.3" x2="212.83" y2="652.74"/>
+        <line class="h" x1="199.48" y1="638.93" x2="199.48" y2="652.37"/>
+      </g>
+      <g>
+        <rect class="d" x="432.33" y="882.76" width="176.98" height="70.24"/>
+        <polygon class="h" points="154.34 971.93 432.33 971.93 432.33 857.29 186.15 857.29 154.34 971.93"/>
+        <rect class="f" x="205.97" y="857.29" width="28.01" height="128.08"/>
+        <rect class="h" x="147.39" y="897.95" width="38.08" height="13.66"/>
+        <rect class="h" x="147.39" y="884.29" width="38.08" height="13.66"/>
+        <line class="h" x1="258.51" y1="840.39" x2="258.51" y2="868.2"/>
+        <line class="h" x1="265.23" y1="848.66" x2="251.79" y2="848.66"/>
+        <line class="h" x1="265.23" y1="852.88" x2="251.79" y2="852.88"/>
+        <polygon class="n" points="266.38 907.89 266.38 874.58 271.82 864.72 249.72 864.72 249.72 873.56 245.02 873.56 240.8 877.34 217.7 877.66 211.62 882.65 211.62 894.87 197.41 895.45 192.8 901.53 192.8 907.89 266.38 907.89"/>
+        <polygon class="h" points="131.08 905.85 144.33 941.52 296.97 941.52 308.87 905.85 131.08 905.85"/>
+        <text class="k" transform="translate(151.17 928.99)"><tspan class="s" x="0" y="0">V</tspan><tspan class="p" x="10.03" y="0">essel</tspan></text>
+        <rect class="n" x="409.87" y="857.29" width="23.03" height="128.08"/>
+        <rect class="d" x="50.88" y="941.24" width="358.99" height="44.13"/>
+        <text class="m" transform="translate(164.71 1039.57)"><tspan class="q"><tspan x="0" y="0">Emptying Valve</tspan></tspan><tspan class="j"><tspan x="23.19" y="14.4">OPEN</tspan></tspan></text>
+        <text class="m" transform="translate(416.8 1039.57)"><tspan class="q"><tspan x="0" y="0">Filler Valve</tspan></tspan><tspan class="j"><tspan x="3" y="14.4">CLOSED</tspan></tspan></text>
+        <text class="k" transform="translate(408.59 806.1)"><tspan x="0" y="0">Up</tspan><tspan class="aa" x="21.66" y="0">p</tspan><tspan class="y" x="30.1" y="0">e</tspan><tspan x="37.2" y="0">r</tspan><tspan x="4.06" y="18.76">G</tspan><tspan class="ab" x="16.77" y="18.76">a</tspan><tspan x="24.44" y="18.76">tes</tspan><tspan x="-24.17" y="37.51">CLOSED</tspan></text>
+        <text class="k" transform="translate(176.11 802.67)"><tspan x="0" y="0">L</tspan><tspan class="w" x="9.91" y="0">o</tspan><tspan class="x" x="18.2" y="0">w</tspan><tspan class="y" x="30.49" y="0">e</tspan><tspan x="37.59" y="0">r</tspan><tspan x="0" y="18.76">G</tspan><tspan class="ab" x="12.71" y="18.76">a</tspan><tspan x="20.38" y="18.76">tes</tspan><tspan x="0" y="37.51">OPEN</tspan></text>
+        <polygon class="h" points="411.33 953 411.33 985.3 50.88 985.3 50.88 1062.91 609.32 1062.91 609.32 985.3 609.32 953 411.33 953"/>
+        <text class="i" transform="translate(62.18 965.91)"><tspan x="0" y="0">L</tspan><tspan class="w" x="9.91" y="0">o</tspan><tspan class="x" x="18.2" y="0">w</tspan><tspan class="y" x="30.49" y="0">e</tspan><tspan x="37.59" y="0">r L</tspan><tspan class="t" x="57.98" y="0">e</tspan><tspan class="v" x="65.34" y="0">v</tspan><tspan x="73.26" y="0">el</tspan></text>
+        <rect class="e" x="472.05" y="953" width="13.44" height="70.55"/>
+        <rect class="e" x="240.75" y="985.37" width="13.44" height="38.17"/>
+        <rect class="e" x="150.62" y="985.37" width="13.44" height="38.17"/>
+        <rect class="e" x="260.12" y="985.37" width="13.44" height="38.17"/>
+        <rect class="e" x="279.49" y="985.37" width="13.44" height="38.17"/>
+        <rect class="e" x="298.87" y="985.37" width="13.44" height="38.17"/>
+        <rect class="e" x="318.24" y="985.37" width="13.44" height="38.17"/>
+        <rect class="e" x="337.61" y="985.37" width="13.44" height="38.17"/>
+        <rect class="e" x="356.99" y="985.37" width="13.44" height="38.17"/>
+        <rect class="e" x="495.36" y="953" width="13.44" height="70.55"/>
+        <rect class="e" x="519.66" y="953" width="13.44" height="70.55"/>
+        <rect class="g" x="335.18" y="825.54" width="13.44" height="382.57" transform="translate(1358.73 674.92) rotate(90)"/>
+        <g>
+          <polygon class="h" points="206.11 1012.5 212.73 1003.4 199.48 1003.4 206.11 1012.5"/>
+          <rect class="h" x="199.39" y="1010.1" width="13.44" height="13.44"/>
+        </g>
+        <g>
+          <polygon class="n" points="445.77 1012.58 452.4 1003.48 439.15 1003.48 445.77 1012.58"/>
+          <rect class="n" x="439.05" y="1010.18" width="13.44" height="13.44"/>
+        </g>
+        <text class="i" transform="translate(551.84 908.17)"><tspan x="0" y="0">Up</tspan><tspan class="aa" x="21.66" y="0">p</tspan><tspan class="y" x="30.1" y="0">e</tspan><tspan x="37.2" y="0">r </tspan><tspan x="10.19" y="18.76">L</tspan><tspan class="u" x="20.1" y="18.76">e</tspan><tspan class="v" x="27.47" y="18.76">v</tspan><tspan x="35.38" y="18.76">el</tspan></text>
+      </g>
+      <text class="l" transform="translate(24.27 50.04)"><tspan x="0" y="0">1.</tspan></text>
+      <text class="l" transform="translate(24.27 791.65)"><tspan x="0" y="0">3.</tspan></text>
+      <text class="l" transform="translate(24.27 420.84)"><tspan x="0" y="0">2.</tspan></text>
+    </g>
+  </g>
+</svg>

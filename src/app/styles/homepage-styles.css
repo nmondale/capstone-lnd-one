@@ -1,6 +1,7 @@
 :root {
   --main-color: #ffffff;
   --alt-color: #000000;
+  --bright-blue: #52A8DC;
 }
 
 body {
@@ -65,3 +66,4 @@ body {
 .mb-2 {
   margin-bottom: 0.5rem;
 }
+

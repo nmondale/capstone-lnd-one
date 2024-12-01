@@ -13,7 +13,7 @@
   .sign {
 	position: relative;
 	transform-style: preserve-3d;
-	animation: rotate 4s linear infinite;
+	animation: rotate 15s linear infinite;
   }
   
   .signFace {

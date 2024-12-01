@@ -21,11 +21,16 @@ a {
   :root {
     --main-color: #ffffff;
     --alt-color: #000000;
+    --bright-blue: #52A8DC;
   }
   .dark {
     --main-color: #000000;
     --alt-color: #ffffff;
   }
+}
+
+[data-theme="alt"] {
+  --bright-blue: pink;
 }
 
 @layer base {
