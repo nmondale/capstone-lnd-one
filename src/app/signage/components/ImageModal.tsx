@@ -33,14 +33,14 @@ const ImageModal: React.FC<ImageModalProps> = ({
         onClick={onClose}
       >
         <div
-          className="relative max-w-4xl w-full flex flex-col items-center"
+          className="relative max-w-[90%] w-full flex flex-col items-center"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="w-full overflow-hidden rounded-lg border border-alt bg-main">
+          <div className="max-h-[80vh] w-full overflow-hidden rounded-lg border border-alt bg-main">
             <img
               src={imageUrl}
               alt={altText}
-              className="w-full h-auto object-contain"
+              className="w-full h-full object-contain"
             />
           </div>
 

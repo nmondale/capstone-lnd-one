@@ -63,10 +63,12 @@ const Artifact3: React.FC = () => {
         {/* Description Text */}
         <div className="prose">
           <p className="text-sm">
-            Located in Minneapolis, Lock and Dam No. 1 (also known as the Ford
-            Dam) is a crucial piece of infrastructure on the Mississippi River.
-            These signs document the various warnings and restrictions around
-            the facility.
+            The Dam infrastructure exerts precise and total control over the
+            flow of the Mississippi using the concrete dam structure, allowing
+            some water to pass, and forcing some water to remain in its place.
+            Beyond this physical barrier however, there are many other more
+            conceptual barriers to entry, where User-Agents are made to leave
+            parts of their identity behind, while allowing others through.
           </p>
         </div>
       </div>

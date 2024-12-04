@@ -32,8 +32,6 @@ const Artifact3: React.FC = () => {
 
     try {
       const response = await axios.get("/api/vessel-traffic");
-
-      // Log raw response for debugging
       console.log("Raw response:", response.data);
       setDebugInfo(
         (prev) =>
@@ -44,7 +42,6 @@ const Artifact3: React.FC = () => {
           )}...`
       );
 
-      // Sort by arrival date but don't limit to 5
       const sortedData = response.data.sort(
         (a: VesselData, b: VesselData) =>
           new Date(b.arrivalDate).getTime() - new Date(a.arrivalDate).getTime()
@@ -97,49 +94,64 @@ const Artifact3: React.FC = () => {
         <p>Loading vessel data...</p>
       ) : (
         <div className="grid gap-4">
-          {vesselData.map((vessel, index) => (
-            <div key={index} className="border border-alt rounded-lg">
-              <div className="flex items-center h-12 divide-x divide-alt border-b border-alt">
-                <div className="px-4 h-full flex items-center">
-                  <span className="text-3xl font-bold">{index + 1}</span>
+          {vesselData.length > 0 ? (
+            vesselData.map((vessel, index) => (
+              <div key={index} className="border border-alt rounded-lg">
+                <div className="flex items-center h-12 divide-x divide-alt border-b border-alt">
+                  <div className="px-4 h-full flex items-center">
+                    <span className="text-3xl font-bold">{index + 1}</span>
+                  </div>
+
+                  <div className="px-3 h-full flex-grow flex items-center">
+                    {new Date(vessel.arrivalDate).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}{" "}
+                    —{" "}
+                    {new Date(vessel.arrivalDate).toLocaleTimeString("en-US", {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}
+                  </div>
+
+                  <div className="px-6 h-full flex items-center">
+                    <i>
+                      {vessel.direction === "U" ? "Upstream" : "Downstream"}
+                    </i>
+                  </div>
                 </div>
 
-                <div className="px-3 h-full flex-grow flex items-center">
-                  {new Date(vessel.arrivalDate).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}{" "}
-                  —{" "}
-                  {new Date(vessel.arrivalDate).toLocaleTimeString("en-US", {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })}
-                </div>
-
-                <div className="px-6 h-full flex items-center">
-                  <i>{vessel.direction === "U" ? "Upstream" : "Downstream"}</i>
+                <div className="mt-2 pt-2">
+                  <div className="flex justify-between items-center text-sm px-5 pb-4">
+                    <div>
+                      <span className="font-semibold">Vessel:</span>{" "}
+                      {toTitleCase(vessel.vesselName)}
+                    </div>
+                    <div>
+                      <span className="font-semibold">Total Lockage Time:</span>{" "}
+                      {calculateLockageTime(
+                        vessel.arrivalDate,
+                        vessel.endOfLockage
+                      )}{" "}
+                      minutes
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <div className="mt-2 pt-2">
-                <div className="flex justify-between items-center text-sm px-5 pb-4">
-                  <div>
-                    <span className="font-semibold">Vessel:</span>{" "}
-                    {toTitleCase(vessel.vesselName)}
-                  </div>
-                  <div>
-                    <span className="font-semibold">Total Lockage Time:</span>{" "}
-                    {calculateLockageTime(
-                      vessel.arrivalDate,
-                      vessel.endOfLockage
-                    )}{" "}
-                    minutes
-                  </div>
+            ))
+          ) : (
+            <div className="border border-alt rounded-lg">
+              <div className="flex items-center h-12 divide-x divide-alt border-b border-alt">
+                <div className="px-4 h-full flex items-center">
+                  <span className="text-3xl font-bold">0</span>
+                </div>
+                <div className="px-3 h-full flex-grow flex items-center">
+                  No vessels have used the lock in the past 30 days
                 </div>
               </div>
             </div>
-          ))}
+          )}
         </div>
       )}
     </div>

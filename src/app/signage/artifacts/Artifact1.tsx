@@ -57,10 +57,9 @@ const Artifact1: React.FC = () => {
         {/* Description Text */}
         <div className="prose">
           <p className="text-sm">
-            Located in Minneapolis, Lock and Dam No. 1 (also known as the Ford
-            Dam) is a crucial piece of infrastructure on the Mississippi River.
-            These signs document the various warnings and restrictions around
-            the facility.
+            The map below has a vector overlay in red of the real estate that is
+            currently federally owned by the US Army Corps of Engineers. This
+            land is heavily surveilled, maintained, and organized.
           </p>
         </div>
 

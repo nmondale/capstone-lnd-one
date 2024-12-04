@@ -1,11 +1,16 @@
 :root {
   --main-color: #ffffff;
   --alt-color: #000000;
-  --bright-blue: #52A8DC;
+  --bright-blue: #52a8dc;
+  --min-viewport-width: 1024px;
+  --min-viewport-height: 1024px;
 }
 
 body {
-  font-family: 'Cardo', serif; /* Ensure Cardo is loaded */
+  font-family: "Cardo", serif; /* Ensure Cardo is loaded */
+  min-width: var(--min-viewport-width);
+  min-height: var(--min-viewport-height);
+  overflow: auto;
 }
 
 .container-box {
@@ -40,21 +45,6 @@ body {
   font-family: var(--font-cardo), serif;
 }
 
-.text-4xl {
-  font-size: 6.1rem;
-  line-height: 2.5rem;
-}
-
-.text-sm {
-  font-size: 0.9rem;
-  line-height: 1.5rem;
-}
-
-.text-nav {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .font-bold {
   font-weight: 900;
 }
@@ -67,3 +57,8 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.viewport-container {
+  min-width: var(--min-viewport-width);
+  min-height: var(--min-viewport-height);
+  overflow: auto;
+}

@@ -56,11 +56,26 @@ const config: Config = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
+  		fontSize: {
+			
+  			'sm': 'clamp(0.8rem, 1.1vw, 1.4rem)',
+  			'nav': 'clamp(0.8rem, 1vw, 1rem)',
+			'3xl': 'clamp(1.5rem, 2vw, 2.5rem)',
+  			'4xl': 'clamp(3rem, 7.5vw, 10rem)',
+  		},
+  		lineHeight: {
+  			'sm': 'clamp(1.2rem, 1.3vw, 1.5rem)',
+  			'nav': 'clamp(1.2rem, 1.3vw, 1.5rem)',
+			'3xl': 'clamp(1.5rem, 2vw, 2.5rem)',
+  			'4xl': 'clamp(2rem, 2.2vw, 2.2rem)',
+  		}
   	},
   	colors: {
-  		main: 'var(--main-color)',
-  		alt: 'var(--alt-color)',
-      brightBlue: 'var(--bright-blue)',
+      main: "var(--main-color)",
+      alt: "var(--alt-color)",
+      brightest: "var(--brightest-color)",
+      darkest: "var(--darkest-color)",
+      brightBlue: "var(--bright-blue)",
   	},
   },
   plugins: [require("tailwindcss-animate")],

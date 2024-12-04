@@ -16,5 +16,11 @@ export const audioUrls = {
       "https://res.cloudinary.com/di9eakcsf/video/upload/v1730700003/7_ddxrst.mp3",
     artifact23:
       "https://res.cloudinary.com/di9eakcsf/video/upload/v1730700002/8_oucuy5.mp3",
+    artifact31:
+      "https://res.cloudinary.com/di9eakcsf/video/upload/v1733081168/scenic_overlook_trimmed_ho7c6z.mp3",
+    artifact32:
+      "https://res.cloudinary.com/di9eakcsf/video/upload/v1733081168/by_the_river_trimmed_s5qnjg.mp3",
+    artifact33:
+      "https://res.cloudinary.com/di9eakcsf/video/upload/v1733081168/no_trespass_trimmed_rmry8b.mp3",
   },
 };

@@ -55,10 +55,16 @@ const Artifact2: React.FC = () => {
         {/* Description Text */}
         <div className="prose">
           <p className="text-sm">
-            Located in Minneapolis, Lock and Dam No. 1 (also known as the Ford
-            Dam) is a crucial piece of infrastructure on the Mississippi River.
-            These signs document the various warnings and restrictions around
-            the facility.
+            There is graffiti on many surfaces around the Lock and Dam 1 space.
+            Some of these surfaces are natural, such as rocks, or wood, some
+            city infrastructure, like bridges, signs, and informational
+            pavilions. Some graffiti were created on government property, with
+            etchings into garbage cans and thick black lines on fence posts.
+            Most of the graffiti placed onto government property remains only in
+            frail remnants, having been forcefully removed. Graffiti welcomes
+            alternative modes of understanding, recoding city infrastructure as
+            a canvas, introducing an environment of artistic reflection and
+            reconsiderations of notions of space.
           </p>
         </div>
       </div>

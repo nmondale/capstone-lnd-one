@@ -1,8 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import ArtifactLayout from "../../../components/ArtifactLayout";
+import ArtifactLoading from "../../../components/ArtifactLoading";
 import Artifact1 from "../artifacts/Artifact1";
 import Artifact2 from "../artifacts/Artifact2";
 import Artifact3 from "../artifacts/Artifact3";
@@ -11,11 +12,24 @@ import Artifact4 from "../artifacts/Artifact4";
 const artifacts = ["Artifact 1", "Artifact 2", "Artifact 3", "Artifact 4"];
 
 const ArtifactPage: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const params = useParams();
   const artifactParam = params.artifact as string;
   const currentArtifact = artifactParam.replace(/-/g, " ");
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [artifactParam]);
+
   const getArtifactComponent = () => {
+    if (isLoading) {
+      return <ArtifactLoading />;
+    }
+
     switch (artifactParam.toLowerCase()) {
       case "artifact-1":
         return <Artifact1 />;

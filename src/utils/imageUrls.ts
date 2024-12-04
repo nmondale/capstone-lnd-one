@@ -2,7 +2,7 @@ export const imageUrls = {
     imHere: {
       artifact1: {
         url: "https://i.imgur.com/rdW9cuU.jpeg",
-        alt: "Description of Artifact 1",
+        alt: "the lock and dam, constructed with my eyeballs",
       },
     },
     poetryText: {
@@ -213,6 +213,30 @@ export const imageUrls = {
       artifact23overlay: {
         url: "https://64.media.tumblr.com/52722f2f0ca1e99d0444db60a53a8ac4/6cbb1f38360f4bf2-d7/s2048x3072/7fb17306611c1c38729f759f780704f4d3115a42.png",
         alt: "ford dam overlook pixelated overlay",
+      },
+      artifact31: {
+        url: "https://64.media.tumblr.com/596b724e893102251766eab67141d2d1/82fde0482d51fd87-5c/s2048x3072/58f2a722473d66801f10e10d344085f49fe870ab.pnj",
+        alt: "no trespassing sign, dark",
+      },
+      artifact32: {
+        url: "https://64.media.tumblr.com/a09a35781cd76cbafa3320a34beb0822/82fde0482d51fd87-59/s2048x3072/2d030be8394fb9f7f9ccf162d0237117af0d6cd4.pnj",
+        alt: "no trespassing sign, flash",
+      },
+      artifact33: {
+        url: "https://64.media.tumblr.com/a31b455905c4e09cf46c3896cbb566f0/82fde0482d51fd87-56/s2048x3072/7d005eb94d415bfb0bdadfcaefaedba72d26aefc.pnj",
+        alt: "ice growing on river, dark",
+      },
+      artifact34: {
+        url: "https://64.media.tumblr.com/f0f9517d43e46756da676073a5e5b6e4/82fde0482d51fd87-14/s2048x3072/256ff67de9665eeea668c999cf721d950969cd09.pnj",
+        alt: "ice growing on river, flash",
+      },
+      artifact35: {
+        url: "https://64.media.tumblr.com/894c0d3800a11d1172cd31edeefcd4cd/82fde0482d51fd87-e4/s2048x3072/5efeaa19aa3e14152550bd26929a7dcb3dbae929.pnj",
+        alt: "ford scenic overlook, dark",
+      },
+      artifact36: {
+        url: "https://64.media.tumblr.com/b8a5987a9ce74534a1ad11d9db46e9df/82fde0482d51fd87-50/s2048x3072/5e44069cc31fb908f6e40579c828dc13de06be7d.pnj",
+        alt: "ford scenic overlook, flash",
       },
     },
   thrownAside: {

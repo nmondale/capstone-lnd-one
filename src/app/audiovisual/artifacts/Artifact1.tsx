@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { imageUrls } from "../../../utils/imageUrls";
-import { useAudio } from "../../../hooks/useAudio";
-import { audioUrls } from "../../../utils/audioUrls";
+import { imageUrls } from "@/utils/imageUrls";
+import { useAudio } from "@/hooks/useAudio";
+import { audioUrls } from "@/utils/audioUrls";
 
 // Style constants
 const BORDER_STYLES = {
