@@ -268,5 +268,9 @@ export const imageUrls = {
       url: "https://64.media.tumblr.com/da74e638cee7168784bc43e5349233c1/a6f093127c3749e6-da/s2048x3072/d25fa94fc9db9c161994ce0db2fcb4f9cfcd010f.jpg",
       alt: "Figure 3: The unnamed road that leads down to the lock and dam",
     },
+    artifact41: {
+      url: "https://i.imgur.com/tu20aLZ.png",
+      alt: "Postcards show that most people concerned about garbage"
+    }
   },
 };

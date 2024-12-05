@@ -1,8 +1,7 @@
 {
+  "/thrown-aside/[artifact]/page": "app/thrown-aside/[artifact]/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/vessel-traffic/route": "app/api/vessel-traffic/route.js",
   "/page": "app/page.js",
-  "/poetrytext/page": "app/poetrytext/page.js",
-  "/poetrytext/[artifact]/page": "app/poetrytext/[artifact]/page.js",
-  "/audiovisual/page": "app/audiovisual/page.js",
-  "/audiovisual/[artifact]/page": "app/audiovisual/[artifact]/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/thrown-aside/page": "app/thrown-aside/page.js"
 }
