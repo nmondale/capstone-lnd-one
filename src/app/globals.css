@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   font-family: var(--font-cardo), serif;
 }
@@ -21,7 +20,7 @@ a {
   :root {
     --main-color: #ffffff;
     --alt-color: #000000;
-    --bright-blue: #52A8DC;
+    --bright-blue: #52a8dc;
   }
   .dark {
     --main-color: #000000;
@@ -41,6 +40,3 @@ a {
     @apply bg-background text-foreground;
   }
 }
-
-
-

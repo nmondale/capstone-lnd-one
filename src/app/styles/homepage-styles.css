@@ -6,6 +6,16 @@
   --min-viewport-height: 1024px;
 }
 
+html{
+  height: 100%;
+  overflow: hidden;
+}
+
+main {
+  height: 100vh;
+  overflow: hidden;
+}
+
 body {
   font-family: "Cardo", serif; /* Ensure Cardo is loaded */
   min-width: var(--min-viewport-width);

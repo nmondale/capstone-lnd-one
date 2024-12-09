@@ -53,7 +53,7 @@ const Popup: React.FC<PopupProps> = ({
                    transition-colors duration-300 ease-in-out
                    group-hover:bg-alt group-hover:text-main"
         style={{
-          width: "300px",
+          width: "450px",
           maxWidth: "90vw",
           zIndex: 50,
         }}

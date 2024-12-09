@@ -24,15 +24,27 @@ const Artifact1: React.FC = () => {
 
   // Helper function to extract latest reading from USACE data
   const extractLatestReading = (data: any) => {
-    const segment =
-      data["time-series"]["time-series"][0]["regular-interval-values"]
-        .segments[0];
-    return {
-      value: segment.values[segment.values.length - 1][0],
-      unit: data["time-series"]["time-series"][0]["regular-interval-values"]
-        .unit,
-      queryTime: data["time-series"]["query-info"]["time-of-query"],
-    };
+    try {
+      if (!data?.values || !Array.isArray(data.values)) {
+        throw new Error("No values array found in response");
+      }
+
+      const latestReading = data.values[data.values.length - 1];
+
+      if (!latestReading || !Array.isArray(latestReading)) {
+        throw new Error("Invalid reading format");
+      }
+
+      return {
+        value: latestReading[1], // Second element is the value
+        unit: data.units || "ft",
+        queryTime: new Date(latestReading[0]).toISOString(), // First element is timestamp
+      };
+    } catch (err) {
+      console.error("Error extracting reading:", err);
+      console.error("Data structure received:", JSON.stringify(data, null, 2));
+      throw new Error("Failed to extract reading from API response");
+    }
   };
 
   // Main data fetching function
@@ -43,17 +55,32 @@ const Artifact1: React.FC = () => {
     );
     try {
       // Create array of API requests for all measurements
-      const requests = MEASUREMENTS.map((measurement) =>
-        axios.get("https://cwms-data.usace.army.mil/cwms-data/timeseries", {
-          params: {
-            office: "MVP",
-            name: measurement.name,
-          },
-        })
-      );
+      const requests = MEASUREMENTS.map((measurement) => {
+        const url = new URL(
+          "https://cwms-data.usace.army.mil/cwms-data/timeseries"
+        );
+        const params = {
+          office: "MVP",
+          name: measurement.name,
+        };
+
+        // Add params to URL for logging
+        url.search = new URLSearchParams(params).toString();
+
+        // Log the full URL
+        console.log("Fetching water data from:", url.toString());
+
+        return axios.get(url.toString());
+      });
 
       // Wait for all requests to complete
       const responses = await Promise.all(requests);
+
+      // Log the first response data structure
+      console.log(
+        "First response data structure:",
+        JSON.stringify(responses[0].data, null, 2)
+      );
 
       // Process all responses into a single object
       const measurements = responses.reduce((acc, response, index) => {
