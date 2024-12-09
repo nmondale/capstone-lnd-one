@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useTimeContext } from "../hooks/useTimeContext";
 import "../app/styles/homepage-styles.css";
 import { ThemeToggle } from "./ThemeToggle";
+import Popup from "./Popup";
 
 interface ArtifactLayoutProps {
   children: React.ReactNode;
@@ -24,6 +25,11 @@ const ArtifactLayout: React.FC<ArtifactLayoutProps> = ({
   currentArtifact,
 }) => {
   const { currentTheme } = useTimeContext();
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupPosition] = useState(() => ({
+    top: Math.random() * 60 + 20,
+    left: Math.random() * 60 + 20,
+  }));
 
   return (
     <div
@@ -31,6 +37,21 @@ const ArtifactLayout: React.FC<ArtifactLayoutProps> = ({
         currentTheme === "dark" ? "text-white" : "text-black"
       }`}
     >
+      {showPopup && (
+        <>
+          <div
+            className="fixed inset-0 bg-main transition-opacity duration-300 ease-in-out pointer-events-auto opacity-70"
+            style={{ zIndex: 40 }}
+            onClick={() => setShowPopup(false)}
+          />
+          <Popup
+            title={title}
+            description={description}
+            position={popupPosition}
+            onDismiss={() => setShowPopup(false)}
+          />
+        </>
+      )}
       <div className="flex flex-row h-screen">
         <div className="w-[20%] container-box">
           <Link
@@ -39,8 +60,15 @@ const ArtifactLayout: React.FC<ArtifactLayoutProps> = ({
           >
             &lt;- Return Home
           </Link>
-          <h1 className="text-3xl pt-6 px-6 pb-3">{title}</h1>
-          <p className="text-sm pb-6 px-6">{description}</p>
+          <h2 className="text-2xl italic pt-6 px-6">Artifact Collection:</h2>
+          <h1 className="text-3xl font-bold pb-3 pt-1 px-6">{title}</h1>
+          <button
+            onClick={() => setShowPopup(true)}
+            className="mx-6 mb-4 px-4 py-2 bg-main border border-alt text-alt rounded-full hover:bg-alt hover:text-main transition-all flex items-center justify-between w-[80%]"
+          >
+            <span className="text-2xl font-black">𓁺</span>
+            <span className="text-sm">Look a Little Closer</span>
+          </button>
           {artifacts.map((artifact, index) => (
             <Link
               key={index}

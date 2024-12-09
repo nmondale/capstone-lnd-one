@@ -52,7 +52,7 @@ const ArtifactPage: React.FC = () => {
   return (
     <ArtifactLayout
       title="Thrown Aside"
-      description="Explore the artifacts related to Lock and Dam One/Ford Dam."
+      description="The vast majority of User-Agents in expressing their hopes for a better Lock and Dam describe a cleaner river, a river free of toxicity and pollution. The Thrown Aside artifact collection asks you to consider this pollution on an intimate level, and to think of what it means to throw something aside, to render something a pollutant."
       parentPage="thrown-aside"
       artifacts={artifacts}
       currentArtifact={currentArtifact}

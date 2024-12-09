@@ -99,7 +99,7 @@ const Artifact3: React.FC = () => {
               <div key={index} className="border border-alt rounded-lg">
                 <div className="flex items-center h-12 divide-x divide-alt border-b border-alt">
                   <div className="px-4 h-full flex items-center">
-                    <span className="text-3xl font-bold">{index + 1}</span>
+                    <span className="text-2xl font-bold">{index + 1}</span>
                   </div>
 
                   <div className="px-3 h-full flex-grow flex items-center">

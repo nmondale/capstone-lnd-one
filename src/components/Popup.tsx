@@ -38,11 +38,11 @@ const Popup: React.FC<PopupProps> = ({
     >
       {/* Signpost pole */}
       <div
-        className="absolute bg-alt w-[10%] -translate-x-1/2 left-1/2 
+        className="absolute bg-alt w-[17%] -translate-x-1/2 left-1/2 
                    transition-colors duration-300 ease-in-out
-                   group-hover:bg-main border border-alt"
+                   group-hover:bg-main border border-alt rounded-[10px]"
         style={{
-          top: "-1rem",
+          top: "-1.5rem",
           height: "100vh",
           zIndex: 40,
         }}
@@ -53,13 +53,13 @@ const Popup: React.FC<PopupProps> = ({
                    transition-colors duration-300 ease-in-out
                    group-hover:bg-alt group-hover:text-main"
         style={{
-          width: "450px",
+          width: "350px",
           maxWidth: "90vw",
           zIndex: 50,
         }}
       >
         <h3 className="font-bold text-2xl mb-2">{title}</h3>
-        <p className="text-sm">{description}</p>
+        <p className="text-sm whitespace-pre-line">{description}</p>
       </div>
     </div>
   );

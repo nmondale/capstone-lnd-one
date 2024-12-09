@@ -46,8 +46,8 @@ const ArtifactPage: React.FC = () => {
 
   return (
     <ArtifactLayout
-      title="AudioVisual Content"
-      description="Explore the audiovisual artifacts related to Lock and Dam One/Ford Dam."
+      title="AudioVisual"
+      description={`The AudioVisual artifact collection uses captured audio and visual information to construct a manner of looking and listening in the Lock and Dam 1 space. The information has been captured by me from various angles, temperatures, positions, emotions, hunger levels, audiovisual capturing equipment, etc.\n\nHow do you currently look and listen to the Lock and Dam?\nHow intentional are these processes for you?\nDo you care? Why/why not?`}
       parentPage="audiovisual"
       artifacts={artifacts}
       currentArtifact={currentArtifact}

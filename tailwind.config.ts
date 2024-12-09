@@ -60,7 +60,8 @@ const config: Config = {
 			
   			'sm': 'clamp(0.8rem, 1.1vw, 1.4rem)',
   			'nav': 'clamp(0.8rem, 1vw, 1rem)',
-			'3xl': 'clamp(1.5rem, 2vw, 2.5rem)',
+			'2xl': 'clamp(1.5rem, 2vw, 2.5rem)',
+			'3xl': 'clamp(2rem, 2vw, 3rem)',
   			'4xl': 'clamp(3rem, 7.5vw, 10rem)',
   		},
   		lineHeight: {

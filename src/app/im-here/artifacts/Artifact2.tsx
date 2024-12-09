@@ -12,7 +12,7 @@ import Sketch9 from "../../../assets/sketches/fishing.svg";
 const Artifact2: React.FC = () => {
   return (
     <div className="p-8">
-      <h2 className="text-3xl font-bold mb-4">Observational Sketches</h2>
+      <h2 className="text-2xl font-bold mb-4">Observational Sketches</h2>
       <p className="text-sm mb-6">
         On each of my many visits to LD1, I always made sure to draw everything
         I found interesting.

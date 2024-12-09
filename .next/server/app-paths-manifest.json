@@ -1,10 +1,7 @@
 {
-  "/audiovisual/page": "app/audiovisual/page.js",
-  "/signage/[artifact]/page": "app/signage/[artifact]/page.js",
+  "/im-here/page": "app/im-here/page.js",
+  "/im-here/[artifact]/page": "app/im-here/[artifact]/page.js",
   "/page": "app/page.js",
-  "/poetrytext/page": "app/poetrytext/page.js",
   "/audiovisual/[artifact]/page": "app/audiovisual/[artifact]/page.js",
-  "/litreview/page": "app/litreview/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/poetrytext/[artifact]/page": "app/poetrytext/[artifact]/page.js"
+  "/audiovisual/page": "app/audiovisual/page.js"
 }

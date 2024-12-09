@@ -3,7 +3,7 @@ import React from "react";
 const Artifact4: React.FC = () => {
   return (
     <div className="p-8">
-      <h2 className="text-3xl font-bold mb-4">
+      <h2 className="text-2xl font-bold mb-4">
         What do you see, what do you hear?
       </h2>
       <p className="text-sm mb-10">

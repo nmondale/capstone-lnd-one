@@ -52,7 +52,10 @@ const ArtifactPage: React.FC = () => {
   return (
     <ArtifactLayout
       title="Signage"
-      description="Explore the artifacts related to Lock and Dam One/Ford Dam."
+      description={`Artifacts in the Signage collection represent the physical textual and graphic signs that claim ownership of the Lock and Dam 1 space, establishing modes of comportment within a pre established standard. Each sign embeds visual language into LD1, and uses a social vernacular that defines the ways in which User-Agents are allowed to behave or not behave. 
+\n\nWhat signs do you see on this webpage? 
+\nHow am I telling you to behave in my digital space? 
+\nHow have I claimed ownership, how have you?`}
       parentPage="signage"
       artifacts={artifacts}
       currentArtifact={currentArtifact}

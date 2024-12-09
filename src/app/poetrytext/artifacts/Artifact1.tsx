@@ -114,7 +114,7 @@ const Artifact1: React.FC = () => {
   if (loading) {
     return (
       <div className="p-8">
-        <h2 className="text-3xl font-bold mb-4">Loading water data...</h2>
+        <h2 className="text-2xl font-bold mb-4">Loading water data...</h2>
       </div>
     );
   }
@@ -123,7 +123,7 @@ const Artifact1: React.FC = () => {
   if (error) {
     return (
       <div className="p-8">
-        <h2 className="text-3xl font-bold mb-4">
+        <h2 className="text-2xl font-bold mb-4">
           Error Fetching Water Data, Please Try Again Later
         </h2>
         <p className="text-red-500">{error}</p>
@@ -141,7 +141,7 @@ const Artifact1: React.FC = () => {
   return (
     <div className="p-8 w-[85%] mx-auto max-w-screen-lg min-w-screen-sm">
       <div className="mt-4 mx-auto">
-        <h1 className="text-3xl text-left font-bold mb-8">
+        <h1 className="text-2xl text-left font-bold mb-8">
           How does a Lock and Dam functions to enable river navigation through
           uneven river terrain?
         </h1>
@@ -247,7 +247,7 @@ const Artifact1: React.FC = () => {
             </div>
           </div>
           <div className="w-1/2 pl-4">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-2xl font-bold mb-4">
               Zoomed-In View of Lake Level Control
             </h2>
             <p className="text-sm">
@@ -281,7 +281,7 @@ const Artifact1: React.FC = () => {
       </div>
       {waterData && (
         <>
-          <h2 className="text-3xl font-bold mb-4 mt-12">
+          <h2 className="text-2xl font-bold mb-4 mt-12">
             Broader Lock and Dam Profile View
           </h2>
           <div

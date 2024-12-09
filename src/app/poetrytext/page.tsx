@@ -21,7 +21,7 @@ const PoetryTextPage = () => {
   return (
     <ArtifactLayout
       title="Poetry Text"
-      description="Explore the artifacts related to Lock and Dam One/Ford Dam."
+      description="The PoetryText artifact collection houses works of poetic web. The artifacts act as discrete poetic renderings of the current state of the Lock and Dam 1, the broader processes of speculative design, and the philosophical implications of damming."
       parentPage="poetrytext"
       artifacts={artifacts}
       currentArtifact="Artifact 1"
