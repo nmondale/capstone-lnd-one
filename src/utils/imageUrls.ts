@@ -1,4 +1,52 @@
 export const imageUrls = {
+    bookCovers: {
+
+      // Discussion Guides (Covers + Image of Authors)
+      bellHooks: {
+        url: "https://64.media.tumblr.com/e2b619dd2e3d6fef6fd8a1c2700fe8ae/f2e9a351a7731234-45/s2048x3072/bb260fdc557cb3900d1659d6996b3a3c73c2c1fb.jpg",
+        alt: "bell hooks, courtesy of new york times",
+      },
+      bellHooksCover: {
+        url: "https://64.media.tumblr.com/23278bd1d1af01ba7bbd5f9fd86971f8/f2e9a351a7731234-1b/s640x960/2645cd7b727a1b2151cb47829a73e070f056aafb.pnj",
+        alt: "Art on My Mind, bell hooks",
+      },
+      jrCarpenter: {
+        url: "https://64.media.tumblr.com/99351e1b09f84712b7b63752f04e7451/f2e9a351a7731234-4e/s400x600/969171533a489ccad6351123f93f60f1977f7ff0.jpg",
+        alt: "J.R. Carpenter, courtesy of chicago review",
+      },
+      jrCarpenterCover:{
+        url: "https://64.media.tumblr.com/af4f592ba680c17e47d031604bb0aef4/f2e9a351a7731234-72/s640x960/72b38ad3bbfa21290589a95b29a8e67d6e9092d5.pnj",
+        alt: "screenshot from the 'A Handmade Web' webpage, J.R. Carpenter",
+      },
+
+      // Book Covers
+      mappingControversies: {
+        url: "https://64.media.tumblr.com/0c3587c2a9cb3ad4bc591292f57811b9/f2e9a351a7731234-61/s640x960/b4e9a780dd22a4df4bb09e7c6c28390f52020961.pnj",
+        alt: "Mapping Controversies in Architecture, Albena Yaneva"
+      },
+      onSpatialPlanning: {
+        url: "https://64.media.tumblr.com/e90a9ca8f2c3b24235467b00dbd6ea48/f2e9a351a7731234-22/s640x960/264ff780d683e25c7bb66fa4cdf0a1b979157be1.pnj",
+        alt: "On Spatial Planning and Marx-ism: Looking Back, Going Forward by Ståle Holgersen"
+      },
+      countercultureToCyberculture: {
+        url: "https://64.media.tumblr.com/718e8623745674b10d57b51316f67950/f2e9a351a7731234-fe/s640x960/55bf748069d2eda28f3aa7a5e5b1388dbb57bb8c.pnj",
+        alt: "From Counterculture to Cyberculture by Fred Turner"
+      },
+      speculativeEverything: {
+        url: "https://64.media.tumblr.com/767dd2b7f1a915b5cd83a570f024daf4/f2e9a351a7731234-ca/s640x960/b5ec9d0efa5e4b6d2d7be7b40ba07e286cb3fc47.pnj",
+        alt: "Speculative Everything by Anthony Dunne & Fiona Raby"
+      },
+      soSmooth: {
+        url: "https://64.media.tumblr.com/a36d955fa116943d3d94bceaeef7a606/f2e9a351a7731234-cf/s640x960/3d7ab5aa218881141f43b3a48fe4bde4812be326.pnj",
+        alt: "If everything is so smooth, why am I so sad? by Anastasia Kubrak"
+      },
+      cyborgManifesto: {
+        url: "https://64.media.tumblr.com/554c954d601982085274a58829d3963f/f2e9a351a7731234-61/s640x960/f351fb62696f40f99204107bf896973b3c009bd7.pnj",
+        alt: "The Cyborg Manifesto by Donna Haraway"
+      }
+
+    },
+
     imHere: {
       artifact1: {
         url: "https://i.imgur.com/rdW9cuU.jpeg",

@@ -11,8 +11,16 @@ import { useTimeContext } from "../../hooks/useTimeContext";
 import Link from "next/link";
 import "../styles/homepage-styles.css";
 import { ThemeToggle } from "../../components/ThemeToggle";
+
+import BookCoverSVG from "../../assets/icons/book.svg";
+import { imageUrls } from "../../utils/imageUrls";
+
 import { debounce } from "lodash";
-import { introductionContent, booksContent } from "./content";
+import {
+  introductionContent,
+  booksContent,
+  conclusionContent,
+} from "./content";
 
 const LiteratureReview: React.FC = () => {
   const { currentTheme } = useTimeContext();
@@ -26,7 +34,7 @@ const LiteratureReview: React.FC = () => {
     const { scrollTop, clientHeight } = container;
     const middleOfScreen = scrollTop + clientHeight / 2;
 
-    for (let i = 0; i <= booksContent.length; i++) {
+    for (let i = 0; i <= booksContent.length + 1; i++) {
       const element = container.querySelector(`#section-${i}`);
       if (element) {
         const rect = element.getBoundingClientRect();
@@ -79,7 +87,7 @@ const LiteratureReview: React.FC = () => {
   }, [debouncedUpdateActiveSection, isClient]);
 
   const bookHeights = useMemo(
-    () => [0, ...booksContent.map(() => Math.floor(Math.random() * 50) + 100)],
+    () => booksContent.map(() => Math.floor(Math.random() * 50) + 100),
     []
   );
 
@@ -101,24 +109,24 @@ const LiteratureReview: React.FC = () => {
           >
             &lt;- Return Home
           </Link>
-          <div className="flex flex-col p-6 pl-8 pt-10">
+          <div className="flex flex-col p-6 pl-8 pt-4">
             <div className="flex justify-between items-end">
               <div className="w-1/2 flex justify-start items-end">
-                {[0, ...booksContent.map((_, i) => i + 1)].map((num) => (
+                {booksContent.map((_, i) => (
                   <div
-                    key={num}
+                    key={i}
                     style={{
-                      height: `${bookHeights[num]}px`,
-                      marginLeft: num === 0 ? "0" : "-1px",
+                      height: `${bookHeights[i + 1]}px`,
+                      marginLeft: "-1px",
                     }}
                     className={`w-8 flex flex-col justify-end border border-alt cursor-pointer ${
-                      activeSection === num
+                      activeSection === i + 1
                         ? "bg-alt text-main"
                         : "bg-main text-alt"
                     }`}
-                    onClick={() => scrollToSection(num)}
+                    onClick={() => scrollToSection(i + 1)}
                   >
-                    <div className="text-center pb-1">{num}</div>
+                    <div className="text-center pb-1">{i + 1}</div>
                   </div>
                 ))}
               </div>
@@ -134,29 +142,23 @@ const LiteratureReview: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="pt-8">
-              <h2
-                className={`font-bold mb-2 cursor-pointer ${
-                  activeSection === 0 ? "underline" : ""
-                }`}
-                onClick={() => scrollToSection(0)}
-              >
-                Introduction
-              </h2>
-              {booksContent.map((book, index) => (
-                <p
-                  key={index}
-                  className={`mb-2 cursor-pointer ${
-                    activeSection === index + 1 ? "underline" : ""
-                  }`}
-                  onClick={() => scrollToSection(index + 1)}
-                >
-                  {`${index + 1}. `}
-                  <span className="italic">{book.title}</span>
-                  {" by "}
-                  {book.author}
-                </p>
-              ))}
+            <div className="pt-4">
+              <div className="mt-2">
+                {booksContent.map((book, index) => (
+                  <p
+                    key={index}
+                    className={`mb-2 cursor-pointer text-sm ${
+                      activeSection === index + 1 ? "underline" : ""
+                    }`}
+                    onClick={() => scrollToSection(index + 1)}
+                  >
+                    {`${index + 1}. `}
+                    <span className="italic">{book.title}</span>
+                    {" by "}
+                    {book.author}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -176,16 +178,56 @@ const LiteratureReview: React.FC = () => {
               className="p-8 border-b border-alt"
               id={`section-${index + 1}`}
             >
-              <div className="flex items-center">
-                <h2 className="text-3xl font-bold mb-2 ml-2">{book.title}</h2>
+              <div className="w-full flex">
+                <div className="h-[250px] flex items-center justify-center px-8 relative">
+                  <div className="h-[200px] flex items-center justify-center relative">
+                    <img
+                      src={book.coverImage}
+                      alt={`Cover of ${book.title} by ${book.author}`}
+                      className="absolute bottom-0 left-0 w-[90.21%] h-[91.388%]"
+                    />
+                    <BookCoverSVG className="h-[100%] w-auto relative z-10" />
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center pl-2 pr-[25%] py-6 gap-4">
+                  <h2 className="text-2xl font-bold">
+                    {book.title} ({book.year})
+                  </h2>
+                  <h3 className="text-lg -mt-2 font-medium">
+                    by {book.author}
+                  </h3>
+                  {book.link && (
+                    <div className="flex gap-2">
+                      <a
+                        href={book.link}
+                        className="px-8 py-2 border rounded-full hover:underline hover:bg-alt hover:text-main"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {book.linkText}
+                      </a>
+                    </div>
+                  )}
+                </div>
               </div>
-              <h3 className="text-xl italic mb-4">by {book.author}</h3>
               <p
-                className="text-sm"
+                className="text-sm mt-8"
                 dangerouslySetInnerHTML={{ __html: book.content }}
               ></p>
             </div>
           ))}
+          <div
+            className="p-8 border-b border-alt"
+            id={`section-${booksContent.length + 1}`}
+          >
+            <div className="flex items-center">
+              <h2 className="text-2xl font-bold mb-4 ml-2">Conclusion</h2>
+            </div>
+            <p
+              className="text-sm"
+              dangerouslySetInnerHTML={{ __html: conclusionContent }}
+            ></p>
+          </div>
         </div>
       </div>
     </div>

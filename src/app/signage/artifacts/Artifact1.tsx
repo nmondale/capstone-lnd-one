@@ -55,7 +55,7 @@ const Artifact1: React.FC = () => {
         </div>
 
         {/* Description Text */}
-        <div className="prose">
+        <div className={styles.prose}>
           <p className="text-sm">
             The map below has a vector overlay in red of the real estate that is
             currently federally owned by the US Army Corps of Engineers. This

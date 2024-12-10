@@ -26,6 +26,10 @@ a {
     --main-color: #000000;
     --alt-color: #ffffff;
   }
+  .underline {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
 }
 
 [data-theme="alt"] {

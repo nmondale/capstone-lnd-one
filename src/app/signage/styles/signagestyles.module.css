@@ -1,223 +1,237 @@
 /* Base Container Styles
 -------------------------------------------------- */
 .signageContainer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	perspective: 1000px; /* Creates 3D space for rotation */
-  }
-  
-  /* Common Sign Structure
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  perspective: 1000px; /* Creates 3D space for rotation */
+}
+
+/* Common Sign Structure
   -------------------------------------------------- */
-  .sign {
-	position: relative;
-	transform-style: preserve-3d;
-	animation: rotate 15s linear infinite;
-  }
-  
-  .signFace {
-	font-family: var(--font-dm-sans);
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 1px solid var(--alt-color);
-	border-radius: 10px;
-	padding: 5px;
-  }
-  
-  /* Standard Sign Content Styles
+.sign {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 15s linear infinite;
+}
+
+.signFace {
+  font-family: var(--font-dm-sans);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--alt-color);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* Standard Sign Content Styles
   -------------------------------------------------- */
-  .signContent {
-	width: 100%;
-	height: 100%;
-	border: 4px solid currentColor;
-	border-radius: 6px;
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 15px;
-  }
-  
-  .signText {
-	font-size: 15px;
-	text-align: center;
-	line-height: 1;
-	font-weight: bold;
-  }
-  
-  /* Front/Back Face Colors
+.signContent {
+  width: 100%;
+  height: 100%;
+  border: 4px solid currentColor;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.signText {
+  font-size: 15px;
+  text-align: center;
+  line-height: 1;
+  font-weight: bold;
+}
+
+/* Front/Back Face Colors
   -------------------------------------------------- */
-  .front {
-	background-color: var(--main-color);
-	color: var(--alt-color);
-  }
-  
-  .back {
-	background-color: var(--alt-color);
-	color: var(--main-color);
-	transform: rotateY(180deg);
-  }
-  
-  /* RatFuk Sign Specific Styles
+.front {
+  background-color: var(--main-color);
+  color: var(--alt-color);
+}
+
+.back {
+  background-color: var(--alt-color);
+  color: var(--main-color);
+  transform: rotateY(180deg);
+}
+
+/* RatFuk Sign Specific Styles
   -------------------------------------------------- */
-  .ratFukFront, .ratFukBack {
-	border-radius: 0;
-  }
-  
-  .ratFukFront {
-	background-color: var(--alt-color);
-	border: none;
-  }
-  
-  .ratFukBack {
-	background-color: var(--main-color);
-	border: 1px solid var(--alt-color);
-	transform: rotateY(180deg);
-  }
-  
-  /* RatFuk Inner Content Styles */
-  .ratFukInner, .ratFukInnerBack {
-	width: 95%;
-	height: 95%;
-	border-radius: 45px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 3px;
-  }
-  
-  .ratFukInner {
-	background-color: var(--main-color);
-  }
-  
-  .ratFukInnerBack {
-	background-color: var(--alt-color);
-	color: var(--main-color);
-  }
-  
-  .ratFukText, .ratFukTextBack {
-	font-family: var(--font-dm-sans);
-	font-size: 19px;
-	text-align: center;
-  }
-  
-  .ratFukText {
-	color: var(--alt-color);
-  }
-  
-  .ratFukTextBack {
-	color: var(--main-color);
-  }
-  
-  /* Notice Sign Specific Styles
+.ratFukFront,
+.ratFukBack {
+  border-radius: 0;
+}
+
+.ratFukFront {
+  background-color: var(--alt-color);
+  border: none;
+}
+
+.ratFukBack {
+  background-color: var(--main-color);
+  border: 1px solid var(--alt-color);
+  transform: rotateY(180deg);
+}
+
+/* RatFuk Inner Content Styles */
+.ratFukInner,
+.ratFukInnerBack {
+  width: 95%;
+  height: 95%;
+  border-radius: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.ratFukInner {
+  background-color: var(--main-color);
+}
+
+.ratFukInnerBack {
+  background-color: var(--alt-color);
+  color: var(--main-color);
+}
+
+.ratFukText,
+.ratFukTextBack {
+  font-family: var(--font-dm-sans);
+  font-size: 19px;
+  text-align: center;
+}
+
+.ratFukText {
+  color: var(--alt-color);
+}
+
+.ratFukTextBack {
+  color: var(--main-color);
+}
+
+/* Notice Sign Specific Styles
   -------------------------------------------------- */
-  .noticeSign {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 15px;
-	gap: 7px;
-  }
-  
-  .noticeHeader {
-	padding: 5px;
-	font-size: 24px;
-	border-radius: 5px;
-	font-weight: bold;
-	font-style: italic;
-	background-color: var(--alt-color);
-	color: var(--main-color);
-  }
-  
-  .noticeHeaderBack {
-	background-color: var(--main-color);
-	color: var(--alt-color);
-  }
-  
-  .noticeText {
-	color: var(--alt-color);
-	text-align: center;
-	font-weight: bold;
-	font-size: 16px;
-  }
-  
-  .noticeTextBack {
-	color: var(--main-color);
-  }
-  
-  /* Learn Sign Specific Styles
+.noticeSign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap: 7px;
+}
+
+.noticeHeader {
+  padding: 5px;
+  font-size: 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-style: italic;
+  background-color: var(--alt-color);
+  color: var(--main-color);
+}
+
+.noticeHeaderBack {
+  background-color: var(--main-color);
+  color: var(--alt-color);
+}
+
+.noticeText {
+  color: var(--alt-color);
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.noticeTextBack {
+  color: var(--main-color);
+}
+
+/* Learn Sign Specific Styles
   -------------------------------------------------- */
-  .learnSign {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-  
-  .learnSignBack {
-	background-color: var(--alt-color);
-  }
-  
-  /* Pin Dot Decorations */
-  .pinDot {
-	position: absolute;
-	width: 12px;
-	height: 12px;
-	background-color: var(--alt-color);
-	border-radius: 50%;
-	top: 10px;
-  }
-  
-  .pinDot:nth-child(1) { left: 10px; }
-  .pinDot:nth-child(2) { right: 10px; }
-  .pinDotBack { background-color: var(--main-color); }
-  
-  /* Learn Content Styles */
-  .learnContent {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-  }
-  
-  .learnText {
-	color: var(--main-color);
-	padding-top: 30px;
-	padding-right: 30px;
-	font-size: 40px;
-	font-weight: bold;
-	text-align: center;
-	line-height: 0.85;
-	z-index: 1;
-	font-style: italic;
-  }
-  
-  .learnTextBack {
-	color: var(--alt-color);
-  }
-  
-  /* Animation
+.learnSign {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.learnSignBack {
+  background-color: var(--alt-color);
+}
+
+/* Pin Dot Decorations */
+.pinDot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--alt-color);
+  border-radius: 50%;
+  top: 10px;
+}
+
+.pinDot:nth-child(1) {
+  left: 10px;
+}
+.pinDot:nth-child(2) {
+  right: 10px;
+}
+.pinDotBack {
+  background-color: var(--main-color);
+}
+
+/* Learn Content Styles */
+.learnContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.learnText {
+  color: var(--main-color);
+  padding-top: 30px;
+  padding-right: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 0.85;
+  z-index: 1;
+  font-style: italic;
+}
+
+.learnTextBack {
+  color: var(--alt-color);
+}
+
+/* Animation
   -------------------------------------------------- */
-  @keyframes rotate {
-	0% {
-	  transform: rotateY(0deg) rotateZ(0deg);
-	}
-	50% {
-	  transform: rotateY(180deg) rotateZ(5deg);
-	}
-	100% {
-	  transform: rotateY(360deg) rotateZ(0deg);
-	}
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg) rotateZ(0deg);
   }
+  50% {
+    transform: rotateY(180deg) rotateZ(5deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateZ(0deg);
+  }
+}
+
+.prose {
+  padding: 1rem;
+  padding-top: 1.5rem;
+}

@@ -67,12 +67,18 @@ const Artifact4: React.FC = () => {
         </div>
 
         {/* Description Text */}
-        <div className="prose">
+        <div className={styles.prose}>
           <p className="text-sm">
-            Located in Minneapolis, Lock and Dam No. 1 (also known as the Ford
-            Dam) is a crucial piece of infrastructure on the Mississippi River.
-            These signs document the various warnings and restrictions around
-            the facility.
+            LD1 is littered with official USACE informational signage, packed
+            with dense text that describes different facets of the Lock and Dam
+            space, much like this website. Signs describe things like river
+            ecology, the story of building the dam, the impact of dams on the
+            Mississippi waterways, and stories of “another time”, where
+            indigenous people used the LD1 space for canoeing and migration.
+            Countless of these signs feature mistakes, where words may be
+            written twice, punctuation marks forgotten, or representations of
+            false histories that do not accurately reflect the lived experience
+            of User-Agents.
           </p>
         </div>
       </div>

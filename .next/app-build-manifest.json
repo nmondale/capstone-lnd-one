@@ -1,10 +1,10 @@
 {
   "pages": {
-    "/poetrytext/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/poetrytext/page.css",
-      "static/chunks/app/poetrytext/page.js"
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -12,17 +12,17 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/poetrytext/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/poetrytext/page.css",
+      "static/chunks/app/poetrytext/page.js"
+    ],
     "/poetrytext/[artifact]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/poetrytext/[artifact]/page.css",
       "static/chunks/app/poetrytext/[artifact]/page.js"
-    ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
     ],
     "/audiovisual/page": [
       "static/chunks/webpack.js",
@@ -47,6 +47,36 @@
       "static/chunks/main-app.js",
       "static/css/app/im-here/[artifact]/page.css",
       "static/chunks/app/im-here/[artifact]/page.js"
+    ],
+    "/litreview/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/litreview/page.css",
+      "static/chunks/app/litreview/page.js"
+    ],
+    "/thrown-aside/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/thrown-aside/page.css",
+      "static/chunks/app/thrown-aside/page.js"
+    ],
+    "/signage/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/signage/page.css",
+      "static/chunks/app/signage/page.js"
+    ],
+    "/signage/[artifact]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/signage/[artifact]/page.css",
+      "static/chunks/app/signage/[artifact]/page.js"
+    ],
+    "/thrown-aside/[artifact]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/thrown-aside/[artifact]/page.js",
+      "static/css/app/thrown-aside/[artifact]/page.css"
     ]
   }
 }

@@ -38,7 +38,7 @@ const Popup: React.FC<PopupProps> = ({
     >
       {/* Signpost pole */}
       <div
-        className="absolute bg-alt w-[17%] -translate-x-1/2 left-1/2 
+        className="absolute bg-alt w-[10%] -translate-x-1/2 left-1/2 
                    transition-colors duration-300 ease-in-out
                    group-hover:bg-main border border-alt rounded-[10px]"
         style={{

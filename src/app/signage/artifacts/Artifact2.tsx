@@ -53,7 +53,7 @@ const Artifact2: React.FC = () => {
         </div>
 
         {/* Description Text */}
-        <div className="prose">
+        <div className={styles.prose}>
           <p className="text-sm">
             There is graffiti on many surfaces around the Lock and Dam 1 space.
             Some of these surfaces are natural, such as rocks, or wood, some

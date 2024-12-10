@@ -123,10 +123,6 @@ const HomePage = () => {
                 and dam.
               </h1>
               <div className="w-[100%] h-[10%] flex items-center justify-between navigation-box">
-                <p className="text-sm pl-8">Academic</p>
-                <p className="text-sm pr-8 text-right">-&gt;</p>
-              </div>
-              <div className="w-[100%] h-[10%] flex items-center justify-between navigation-box">
                 <p className="text-sm pl-8">About Project</p>
                 <p className="text-sm pr-8 text-right">-&gt;</p>
               </div>

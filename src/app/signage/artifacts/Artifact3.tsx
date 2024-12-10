@@ -61,7 +61,7 @@ const Artifact3: React.FC = () => {
         </div>
 
         {/* Description Text */}
-        <div className="prose">
+        <div className={styles.prose}>
           <p className="text-sm">
             The Dam infrastructure exerts precise and total control over the
             flow of the Mississippi using the concrete dam structure, allowing

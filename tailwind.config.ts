@@ -69,7 +69,7 @@ const config: Config = {
   			'nav': 'clamp(1.2rem, 1.3vw, 1.5rem)',
 			'3xl': 'clamp(1.5rem, 2vw, 2.5rem)',
   			'4xl': 'clamp(2rem, 2.2vw, 2.2rem)',
-  		}
+  		},
   	},
   	colors: {
       main: "var(--main-color)",
@@ -77,7 +77,7 @@ const config: Config = {
       brightest: "var(--brightest-color)",
       darkest: "var(--darkest-color)",
       brightBlue: "var(--bright-blue)",
-  	},
+    },
   },
   plugins: [require("tailwindcss-animate")],
 };
