@@ -1,3 +1,5 @@
+import { arch } from "os";
+
 export const imageUrls = {
     bookCovers: {
 
@@ -51,6 +53,22 @@ export const imageUrls = {
       artifact1: {
         url: "https://i.imgur.com/rdW9cuU.jpeg",
         alt: "the lock and dam, constructed with my eyeballs",
+      },
+      artifact41: {
+        url: "https://64.media.tumblr.com/a51947d8fdee194c04cc2fe92669eb7a/1ec8b803b2be4f35-96/s2048x3072/8fc776c89298149f624ff4915acab0a396e981ac.jpg",
+        alt: "water texture 1",
+      },
+      artifact42: {
+        url: "https://64.media.tumblr.com/f901cf3aa6024fdb8786b9ae2bb91cf8/1ec8b803b2be4f35-8f/s2048x3072/519e19a32abd30a5090e647b6b4e3d9d3eaca181.jpg",
+        alt: "water texture 2",
+      },
+      artifact43: {
+        url: "https://64.media.tumblr.com/5bf9eb8dc9fd871a6f57234b30865dc2/1ec8b803b2be4f35-4b/s2048x3072/ffc8433c69225b1ee34eb21cae66f1eef1437bdd.jpg",
+        alt: "water texture 3",
+      },
+      artifact44: {
+        url: "https://64.media.tumblr.com/f410dae01f5025acea3f86ec5849eac7/1ec8b803b2be4f35-75/s2048x3072/8e883dcea48c632bc7bab2d0687539f21177de99.jpg",
+        alt: "water texture 4",
       },
     },
     poetryText: {

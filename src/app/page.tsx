@@ -96,15 +96,15 @@ const HomePage = () => {
             </div>
             <div className="w-[38%] container-box">
               <p className="text-sm p-8 text-justify">
-                <i> Seeing Yourself in Your Structure </i> reimagines Lock and
-                Dam 1 as an online gallery that examines how built
-                infrastructure, both physical and digital, constrains and shapes
-                our interactions, values, and ideologies. Using this website as
-                an exhibition space, it parallels the dam's control of river
-                flow with the digital world's influence over knowledge,
-                identity, and communal understanding, inviting viewers to engage
-                critically with speculative design as a method for envisioning
-                alternative and ethically reflective infrastructures.{" "}
+                <i> Seeing Yourself in Your Structure </i> explores Lock and Dam
+                1 (LD1) as a lens to examine how built infrastructure shapes
+                social, cultural, and ideological understandings. Drawing
+                parallels between physical spaces like LD1 and digital
+                platforms, the project leverages speculative design to challenge
+                traditional planning practices, fostering critical reflection and
+                imagining more inclusive, equitable urban river spaces. It aims
+                to provide the tools and perspectives needed to rethink how both
+                water and knowledge flow in a post-digital world.
               </p>
             </div>
             <div className="w-[20%] container-box flex items-center justify-center">
@@ -122,10 +122,13 @@ const HomePage = () => {
                 look into the river, and click on a fish to reimagine the lock
                 and dam.
               </h1>
-              <div className="w-[100%] h-[10%] flex items-center justify-between navigation-box">
+              <Link
+                href="/about"
+                className="w-[100%] h-[10%] flex items-center justify-between navigation-box"
+              >
                 <p className="text-sm pl-8">About Project</p>
                 <p className="text-sm pr-8 text-right">-&gt;</p>
-              </div>
+              </Link>
               <Link
                 href="/litreview"
                 className="w-[100%] h-[10%] flex items-center justify-between navigation-box"

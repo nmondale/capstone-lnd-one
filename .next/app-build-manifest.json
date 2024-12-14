@@ -12,29 +12,23 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/thrown-aside/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/thrown-aside/page.css",
+      "static/chunks/app/thrown-aside/page.js"
+    ],
+    "/thrown-aside/[artifact]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/thrown-aside/[artifact]/page.css",
+      "static/chunks/app/thrown-aside/[artifact]/page.js"
+    ],
     "/poetrytext/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/poetrytext/page.css",
       "static/chunks/app/poetrytext/page.js"
-    ],
-    "/poetrytext/[artifact]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/poetrytext/[artifact]/page.css",
-      "static/chunks/app/poetrytext/[artifact]/page.js"
-    ],
-    "/audiovisual/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/audiovisual/page.css",
-      "static/chunks/app/audiovisual/page.js"
-    ],
-    "/audiovisual/[artifact]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/audiovisual/[artifact]/page.css",
-      "static/chunks/app/audiovisual/[artifact]/page.js"
     ],
     "/im-here/page": [
       "static/chunks/webpack.js",
@@ -48,17 +42,23 @@
       "static/css/app/im-here/[artifact]/page.css",
       "static/chunks/app/im-here/[artifact]/page.js"
     ],
-    "/litreview/page": [
+    "/audiovisual/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/litreview/page.css",
-      "static/chunks/app/litreview/page.js"
+      "static/css/app/audiovisual/page.css",
+      "static/chunks/app/audiovisual/page.js"
     ],
-    "/thrown-aside/page": [
+    "/audiovisual/[artifact]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/thrown-aside/page.css",
-      "static/chunks/app/thrown-aside/page.js"
+      "static/css/app/audiovisual/[artifact]/page.css",
+      "static/chunks/app/audiovisual/[artifact]/page.js"
+    ],
+    "/poetrytext/[artifact]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/poetrytext/[artifact]/page.css",
+      "static/chunks/app/poetrytext/[artifact]/page.js"
     ],
     "/signage/page": [
       "static/chunks/webpack.js",
@@ -72,11 +72,17 @@
       "static/css/app/signage/[artifact]/page.css",
       "static/chunks/app/signage/[artifact]/page.js"
     ],
-    "/thrown-aside/[artifact]/page": [
+    "/about/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/thrown-aside/[artifact]/page.js",
-      "static/css/app/thrown-aside/[artifact]/page.css"
+      "static/css/app/about/page.css",
+      "static/chunks/app/about/page.js"
+    ],
+    "/litreview/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/litreview/page.css",
+      "static/chunks/app/litreview/page.js"
     ]
   }
 }

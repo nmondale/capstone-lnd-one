@@ -16,11 +16,7 @@ import BookCoverSVG from "../../assets/icons/book.svg";
 import { imageUrls } from "../../utils/imageUrls";
 
 import { debounce } from "lodash";
-import {
-  introductionContent,
-  booksContent,
-  conclusionContent,
-} from "./content";
+import { booksContent } from "./content";
 
 const LiteratureReview: React.FC = () => {
   const { currentTheme } = useTimeContext();
@@ -34,7 +30,7 @@ const LiteratureReview: React.FC = () => {
     const { scrollTop, clientHeight } = container;
     const middleOfScreen = scrollTop + clientHeight / 2;
 
-    for (let i = 0; i <= booksContent.length + 1; i++) {
+    for (let i = 0; i < booksContent.length; i++) {
       const element = container.querySelector(`#section-${i}`);
       if (element) {
         const rect = element.getBoundingClientRect();
@@ -109,22 +105,22 @@ const LiteratureReview: React.FC = () => {
           >
             &lt;- Return Home
           </Link>
-          <div className="flex flex-col p-6 pl-8 pt-4">
+          <div className="flex flex-col p-6 pl-8">
             <div className="flex justify-between items-end">
               <div className="w-1/2 flex justify-start items-end">
                 {booksContent.map((_, i) => (
                   <div
                     key={i}
                     style={{
-                      height: `${bookHeights[i + 1]}px`,
+                      height: `${bookHeights[i]}px`,
                       marginLeft: "-1px",
                     }}
                     className={`w-8 flex flex-col justify-end border border-alt cursor-pointer ${
-                      activeSection === i + 1
+                      activeSection === i
                         ? "bg-alt text-main"
                         : "bg-main text-alt"
                     }`}
-                    onClick={() => scrollToSection(i + 1)}
+                    onClick={() => scrollToSection(i)}
                   >
                     <div className="text-center pb-1">{i + 1}</div>
                   </div>
@@ -148,9 +144,9 @@ const LiteratureReview: React.FC = () => {
                   <p
                     key={index}
                     className={`mb-2 cursor-pointer text-sm ${
-                      activeSection === index + 1 ? "underline" : ""
+                      activeSection === index ? "underline" : ""
                     }`}
-                    onClick={() => scrollToSection(index + 1)}
+                    onClick={() => scrollToSection(index)}
                   >
                     {`${index + 1}. `}
                     <span className="italic">{book.title}</span>
@@ -163,20 +159,26 @@ const LiteratureReview: React.FC = () => {
           </div>
         </div>
         <div className="container-box overflow-y-auto" ref={containerRef}>
-          <div className="p-8 border-b border-alt" id="section-0">
-            <div className="flex items-center">
-              <h2 className="text-3xl font-bold mb-4 ml-2">Introduction</h2>
+          <div className="p-8 border-b border-alt">
+            <div className="flex flex-col items-center m-6 p-4 pt-6 border rounded-xl">
+              <h1 className="text-6xl font-bold mb-4">Literature Review</h1>
+              <p className="text-lg mb-8 leading-relaxed max-w-3xl">
+                This literature review features my interpretations and
+                discussions of key academic texts that inform this project.
+                Navigate the sources using the sidebar by clicking on either a
+                book on the shelf or the header of source in the list.{" "}
+                <strong>
+                  Please note that each source features a button that links you
+                  to an external site where you can view the source.
+                </strong>
+              </p>
             </div>
-            <p
-              className="text-sm"
-              dangerouslySetInnerHTML={{ __html: introductionContent }}
-            ></p>
           </div>
           {booksContent.map((book, index) => (
             <div
               key={index}
               className="p-8 border-b border-alt"
-              id={`section-${index + 1}`}
+              id={`section-${index}`}
             >
               <div className="w-full flex">
                 <div className="h-[250px] flex items-center justify-center px-8 relative">
@@ -216,18 +218,6 @@ const LiteratureReview: React.FC = () => {
               ></p>
             </div>
           ))}
-          <div
-            className="p-8 border-b border-alt"
-            id={`section-${booksContent.length + 1}`}
-          >
-            <div className="flex items-center">
-              <h2 className="text-2xl font-bold mb-4 ml-2">Conclusion</h2>
-            </div>
-            <p
-              className="text-sm"
-              dangerouslySetInnerHTML={{ __html: conclusionContent }}
-            ></p>
-          </div>
         </div>
       </div>
     </div>

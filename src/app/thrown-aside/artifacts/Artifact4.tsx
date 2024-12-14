@@ -6,26 +6,22 @@ const Artifact4: React.FC = () => {
     <div className="p-8 flex flex-col gap-6 overflow-x-hidden relative bg-darkest">
       <div>
         <h2 className="text-2xl text-brightest font-bold mb-4">
-          A Piece of Garbage: Plastic Bag
+          The "Dear River" Postcard Project: Calls for a Cleaner River
         </h2>
-        <p className="text-sm text-brightest">
-          Discovered at{" "}
-          <a
-            href="https://www.google.com/maps/place/44°54'51.2%22N+93°12'04.8%22W"
-            className="underline"
-          >
-            44°54'51.2"N 93°12'04.8"W
-          </a>
-          , October 15th, 2024 4:15 PM
-        </p>
       </div>
 
       <p className="text-sm text-brightest">
-        This plastic bag was found tangled in the branches of a fallen tree near
-        the river's edge. The bag appears to be from Target, though the logo is
-        partially obscured by mud and wear. Despite environmental initiatives
-        and the store's switch to paper bags in recent years, these resilient
-        artifacts of consumer culture continue to persist in our waterways.
+        The "Dear River" postcard project collected over 2,500 postcards from
+        User-Agents in the Twin Cities, 500 of which were randomly selected and
+        coded. This analysis of a subset of the collection used content tags to
+        identify the common themes within the messages featured on the postcard.
+        You can read more about the Postcard Project on the{" "}
+        <a href="/about" className="underline">
+          About Page
+        </a>
+        . This analysis revealed that the most common content tag was{" "}
+        <i> Cleanliness </i> which covered any message that called for a cleaner
+        or more "natural" river.
       </p>
 
       <div className="relative w-full h-screen">

@@ -29,7 +29,29 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Lock and Dam One",
-  description: "Sample Description",
+  description:
+    "An interactive exploration of Lock and Dam One on the Mississippi River, examining its historical, social, and environmental impact through digital art and research.",
+  keywords: [
+    "Mississippi River",
+    "Lock and Dam One",
+    "Environmental Art",
+    "Digital Installation",
+    "River Infrastructure",
+  ],
+  openGraph: {
+    title: "Lock and Dam One",
+    description:
+      "An interactive exploration of Lock and Dam One on the Mississippi River",
+    type: "website",
+    locale: "en_US",
+    siteName: "Lock and Dam One Project",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lock and Dam One",
+    description:
+      "An interactive exploration of Lock and Dam One on the Mississippi River",
+  },
 };
 
 export default function RootLayout({
@@ -38,11 +60,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${dmSans.variable} ${geistMono.variable} ${cardo.variable} antialiased`}
+        suppressHydrationWarning
       >
-        <TimeProviderWrapper>{children}</TimeProviderWrapper>
+        <TimeProviderWrapper>
+          <div className="bg-main min-h-screen">{children}</div>
+        </TimeProviderWrapper>
       </body>
     </html>
   );
