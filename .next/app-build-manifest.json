@@ -12,6 +12,18 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/about/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/about/page.css",
+      "static/chunks/app/about/page.js"
+    ],
+    "/litreview/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/litreview/page.css",
+      "static/chunks/app/litreview/page.js"
+    ],
     "/thrown-aside/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -29,30 +41,6 @@
       "static/chunks/main-app.js",
       "static/css/app/poetrytext/page.css",
       "static/chunks/app/poetrytext/page.js"
-    ],
-    "/im-here/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/im-here/page.css",
-      "static/chunks/app/im-here/page.js"
-    ],
-    "/im-here/[artifact]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/im-here/[artifact]/page.css",
-      "static/chunks/app/im-here/[artifact]/page.js"
-    ],
-    "/audiovisual/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/audiovisual/page.css",
-      "static/chunks/app/audiovisual/page.js"
-    ],
-    "/audiovisual/[artifact]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/audiovisual/[artifact]/page.css",
-      "static/chunks/app/audiovisual/[artifact]/page.js"
     ],
     "/poetrytext/[artifact]/page": [
       "static/chunks/webpack.js",
@@ -72,17 +60,29 @@
       "static/css/app/signage/[artifact]/page.css",
       "static/chunks/app/signage/[artifact]/page.js"
     ],
-    "/about/page": [
+    "/audiovisual/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/about/page.css",
-      "static/chunks/app/about/page.js"
+      "static/css/app/audiovisual/page.css",
+      "static/chunks/app/audiovisual/page.js"
     ],
-    "/litreview/page": [
+    "/audiovisual/[artifact]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/litreview/page.css",
-      "static/chunks/app/litreview/page.js"
+      "static/css/app/audiovisual/[artifact]/page.css",
+      "static/chunks/app/audiovisual/[artifact]/page.js"
+    ],
+    "/im-here/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/im-here/page.css",
+      "static/chunks/app/im-here/page.js"
+    ],
+    "/im-here/[artifact]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/im-here/[artifact]/page.css",
+      "static/chunks/app/im-here/[artifact]/page.js"
     ]
   }
 }
