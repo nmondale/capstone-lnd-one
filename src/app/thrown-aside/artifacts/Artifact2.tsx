@@ -76,8 +76,6 @@ const Artifact2: React.FC = () => {
           riverside avenues in the Twin Cities. The mini shooter bottle was on
           top of a map frame within this pavilion (<i>Figure 2</i>), empty and
           capless. During this visit, I encountered three workers in a golf cart
-          wearing orange vests that were sweeping the road that leads to
-          capless. During this visit, I encountered three workers in a golf cart
           wearing orange vests that were sweeping the road that leads to LD1,
           checking on the garbage cans (of which there are upwards of 5, all
           built with an opening mechanism that ensures no wildlife can enter, a

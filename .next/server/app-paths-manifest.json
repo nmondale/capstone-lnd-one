@@ -1,8 +1,4 @@
 {
   "/page": "app/page.js",
-  "/audiovisual/[artifact]/page": "app/audiovisual/[artifact]/page.js",
-  "/about/page": "app/about/page.js",
-  "/im-here/page": "app/im-here/page.js",
-  "/im-here/[artifact]/page": "app/im-here/[artifact]/page.js",
-  "/audiovisual/page": "app/audiovisual/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }

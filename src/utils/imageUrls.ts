@@ -161,7 +161,7 @@ export const imageUrls = {
         },
         sign4: {
           url: "https://64.media.tumblr.com/a10812efe7094ab920eb1fa3ec4a3a79/4d8c07fb90cb4516-9b/s1280x1920/6e780ed766bd0d794bd659225cfb42130813c75a.jpg",
-          alt: "kpolice force advertisement: be you with us",
+          alt: "police force advertisement: be you with us",
         },
         sign5: {
           url: "https://64.media.tumblr.com/d61bf15e8eab512b879eb14171db960b/4d8c07fb90cb4516-d6/s1280x1920/f2f649c6a7274eec3bd7e9688b3ed6fabc7acf28.jpg",
