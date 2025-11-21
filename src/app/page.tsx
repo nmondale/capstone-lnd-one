@@ -1,19 +1,50 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import "./styles/homepage-styles.css";
-import { ThemeToggle } from "../components/ThemeToggle";
-import { TimeIcon } from "../components/TimeIcon";
 import { TimeProvider, useTimeContext } from "../hooks/useTimeContext";
 import { formatTime } from "../utils/timeUtils";
-import dynamic from "next/dynamic";
+import dynamicImport from "next/dynamic";
 import Link from "next/link";
-import Popup from "../components/Popup";
 import { usePopups } from "../hooks/usePopups";
-import MobileOverlay from "../components/MobileOverlay";
 
-const FishNavigation = dynamic(() => import("../components/FishNavigation"), {
-  ssr: false,
-});
+// Dynamic imports for components that may access window/document
+const FishNavigation = dynamicImport(
+  () => import("../components/FishNavigation"),
+  {
+    ssr: false,
+  }
+);
+
+const ThemeToggle = dynamicImport(
+  () => import("../components/ThemeToggle").then((mod) => mod.ThemeToggle),
+  {
+    ssr: false,
+  }
+);
+
+const TimeIcon = dynamicImport(
+  () => import("../components/TimeIcon").then((mod) => mod.TimeIcon),
+  {
+    ssr: false,
+  }
+);
+
+const Popup = dynamicImport(
+  () => import("../components/Popup"),
+  {
+    ssr: false,
+  }
+);
+
+const MobileOverlay = dynamicImport(
+  () => import("../components/MobileOverlay"),
+  {
+    ssr: false,
+  }
+);
+
+// Force dynamic rendering to prevent SSR issues with window/document access
+export const dynamic = "force-dynamic";
 
 const HomePage = () => {
   const [isClient, setIsClient] = useState(false);
