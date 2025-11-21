@@ -9,6 +9,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import Popup from "../components/Popup";
 import { usePopups } from "../hooks/usePopups";
+import MobileOverlay from "../components/MobileOverlay";
 
 const FishNavigation = dynamic(() => import("../components/FishNavigation"), {
   ssr: false,
@@ -42,6 +43,9 @@ const HomePage = () => {
 
   return (
     <div className="viewport-container min-h-screen p-0 m-0 bg-alt text-alt">
+      {/* Mobile Overlay */}
+      {isClient && <MobileOverlay />}
+
       {/* Only show overlay and popups if user hasn't seen them before */}
       {!hasSeenPopups && (
         <>
@@ -90,21 +94,21 @@ const HomePage = () => {
               <div className="flex justify-between items-center px-10">
                 <h1 className="text-sm">it's currently</h1>
                 <h2 className="text-sm text-right">
-                  {timeOfDay} at lock n dam 1
+                  {timeOfDay} at lock and dam 1
                 </h2>
               </div>
             </div>
             <div className="w-[38%] container-box">
               <p className="text-sm p-8 text-justify">
-                <i> Seeing Yourself in Your Structure </i> explores Lock and Dam
-                1 (LD1) as a lens to examine how built infrastructure shapes
-                social, cultural, and ideological understandings. Drawing
-                parallels between physical spaces like LD1 and digital
+                <i> Seeing Yourself in Your Structure </i> uses Lock and Dam 1
+                (LD1) as a lens to examine how built infrastructure shapes
+                social, cultural, and ideological understandings of river space.
+                Drawing parallels between physical spaces like LD1 and digital
                 platforms, the project leverages speculative design to challenge
-                traditional planning practices, fostering critical reflection and
-                imagining more inclusive, equitable urban river spaces. It aims
-                to provide the tools and perspectives needed to rethink how both
-                water and knowledge flow in a post-digital world.
+                traditional planning practices, fostering critical reflection
+                and imagining more inclusive, equitable urban river spaces. It
+                aims to provide the tools and perspectives needed to rethink how
+                both water and knowledge flow in a post-digital world.
               </p>
             </div>
             <div className="w-[20%] container-box flex items-center justify-center">
@@ -127,7 +131,7 @@ const HomePage = () => {
                 className="w-[100%] h-[10%] flex items-center justify-between navigation-box"
               >
                 <p className="text-sm pl-8">About Project</p>
-                <p className="text-sm pr-8 text-right">-&gt;</p>
+                <p className="text-sm pr-8 text-right">→</p>
               </Link>
               <Link
                 href="/litreview"

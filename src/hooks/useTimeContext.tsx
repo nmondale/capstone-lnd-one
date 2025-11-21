@@ -47,15 +47,21 @@ export const TimeProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const updateTime = useCallback(() => {
     const now = new Date();
-    const stPaulTime = new Date(
-      now.toLocaleString("en-US", { timeZone: "America/Chicago" })
-    );
-    const hour = stPaulTime.getHours();
-    const newColorScheme = getColorScheme(hour);
+    // Get the hour in Chicago timezone using Intl.DateTimeFormat
+    const chicagoTimeFormatter = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/Chicago",
+      hour: "numeric",
+      hour12: false,
+    });
+    const chicagoHour = parseInt(chicagoTimeFormatter.format(now), 10);
+
+    // Create a Date object representing the current time (for display)
+    // The formatTime function will handle timezone conversion for display
+    const newColorScheme = getColorScheme(chicagoHour);
     setTimeContext((prev) => ({
       ...prev,
-      currentTime: stPaulTime,
-      timeOfDay: getTimeOfDay(hour),
+      currentTime: now, // Keep original Date, formatTime handles timezone
+      timeOfDay: getTimeOfDay(chicagoHour),
       colorScheme: newColorScheme,
     }));
   }, []);
