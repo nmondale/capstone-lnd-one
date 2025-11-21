@@ -29,12 +29,9 @@ const TimeIcon = dynamicImport(
   }
 );
 
-const Popup = dynamicImport(
-  () => import("../components/Popup"),
-  {
-    ssr: false,
-  }
-);
+const Popup = dynamicImport(() => import("../components/Popup"), {
+  ssr: false,
+});
 
 const MobileOverlay = dynamicImport(
   () => import("../components/MobileOverlay"),
@@ -48,6 +45,7 @@ export const dynamic = "force-dynamic";
 
 const HomePage = () => {
   const [isClient, setIsClient] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const timeContext = useTimeContext();
   const {
     popupData,
@@ -59,6 +57,13 @@ const HomePage = () => {
 
   useEffect(() => {
     setIsClient(true);
+    // Check if mobile on mount and resize
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   if (!isClient || !timeContext) {
@@ -77,8 +82,8 @@ const HomePage = () => {
       {/* Mobile Overlay */}
       {isClient && <MobileOverlay />}
 
-      {/* Only show overlay and popups if user hasn't seen them before */}
-      {!hasSeenPopups && (
+      {/* Only show overlay and popups if user hasn't seen them before and not on mobile */}
+      {!hasSeenPopups && !isMobile && (
         <>
           <div
             className={`fixed inset-0 bg-main transition-opacity duration-300 ease-in-out pointer-events-auto
